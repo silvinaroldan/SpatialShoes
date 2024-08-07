@@ -38,6 +38,11 @@ Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar 
 **Tareas a realizar:**
 
 - [ ] Crear un catálogo que muestre toda la información y los modelos.
+    - [ ] Obtener los valores del Json
+    - [ ] Mostrar la lista de las zapatillas con sus datos
+    - [ ] Cargar los modelos 3D
+    - [ ] Mostrar los modelos 3D
+
 - [ ] Los modelos podrán manipularse en 3D para poder verlos desde cualquier orientación y tamaño en un modo de visión "libre".
 - [ ] También existirá un modo "expositor" que podrá elegirse en la pantalla para que el modelo gire de manera continua y automática.
 - [ ] Podrá pulsarse en un modelo 3D para verlo en una ventana volumétrica de manera exclusiva y en más detalle.
