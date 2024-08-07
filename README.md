@@ -44,3 +44,6 @@ Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar 
 - [ ] Se podrá marcar como favorito cualquiera de los modelos.
 - [ ] Se generará un layout nuevo para estos favoritos en modo estantería donde podrán verse los modelos 3D rotando de forma continua con su nombre debajo y al pulsarlo se mostrará su ficha en más detalle
 - [ ] Se creará un espacio inmersivo donde habrá un carrusel de zapatos. Aparecerá el primero delante nuestro con unos botones de siguiente o anterior, que harán que se muestren los demás. Se puede crear haciendo que entren y salgan de pantalla por opacidad (por ejemplo) o incluso en una rueda donde veas los demás como se van aproximando. La forma de presentar este espacio es libre. Pero tienen que poder verse al máximo de detalle posible mientras lo tengamos "cogido" y al soltarlo volverá a su posición en el espacio de muestra.
+
+- [ ] Crear icono de la app
+- [ ] 
