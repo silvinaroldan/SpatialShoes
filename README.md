@@ -42,6 +42,7 @@ Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar 
     - [ ] Mostrar la lista de las zapatillas con sus datos
     - [ ] Cargar los modelos 3D
     - [ ] Mostrar los modelos 3D
+    - [ ] Error handler
 
 - [ ] Los modelos podrán manipularse en 3D para poder verlos desde cualquier orientación y tamaño en un modo de visión "libre".
 - [ ] También existirá un modo "expositor" que podrá elegirse en la pantalla para que el modelo gire de manera continua y automática.
