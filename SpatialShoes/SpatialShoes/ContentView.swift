@@ -9,11 +9,15 @@ import SwiftUI
 import RealityKit
 
 struct ContentView: View {
+    
+    @State var shoesViewModel = ShoesViewModel()
+    
     var body: some View {
-        VStack {
-            Text("Hello, Spatial Shoes!")
+        List {
+            ForEach(shoesViewModel.shoes) { shoe in
+                Text(shoe.name)
+            }
         }
-        .padding()
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  Shoe.swift
+//  ShoeModel.swift
 //  SpatialShoes
 //
 //  Created by Silvina Roldan on 07/08/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Shoe: Codable {
+struct ShoeModel: Codable, Identifiable, Hashable {
     let id: Int
     let name: String
     let brand: String
