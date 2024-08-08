@@ -10,21 +10,21 @@ Existe un archivo **shoes.json** que tiene toda la información necesaria.
 
 ```
 struct Shoe: Codable {
-let id: Int
-let name: String
-let brand: String
-let size: [Int]
-let price: Double
-let description: String
-let model3DName: String
-let type: String
-let materials: [String]
-let origin: String
-let gender: String
-let weight: Double
-let colors: [String]
-let warranty: Int
-let certifications: [String]
+    let id: Int
+    let name: String
+    let brand: String
+    let size: [Int]
+    let price: Double
+    let description: String
+    let model3DName: String
+    let type: String
+    let materials: [String]
+    let origin: String
+    let gender: String
+    let weight: Double
+    let colors: [String]
+    let warranty: Int
+    let certifications: [String]
 }
 ```
 Hay que cargar el archivo, que será de solo lectura. Los datos no serán editables desde la app, solo mostrarán los datos de esta.
@@ -37,9 +37,9 @@ Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar 
 
 **Tareas a realizar:**
 
-- [ ] Crear un catálogo que muestre toda la información y los modelos.
-    - [ ] Obtener los valores del Json
-    - [ ] Mostrar la lista de las zapatillas con sus datos
+- [x] Crear un catálogo que muestre toda la información y los modelos.
+    - [x] Obtener los valores del Json
+    - [x] Mostrar la lista de las zapatillas con sus datos
     - [ ] Cargar los modelos 3D
     - [ ] Mostrar los modelos 3D
     - [ ] Error handler
