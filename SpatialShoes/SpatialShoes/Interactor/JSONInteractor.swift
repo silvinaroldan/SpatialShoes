@@ -11,7 +11,6 @@ protocol JSONInteractor {
     func loadJSON<JSON>(url: URL, type: JSON.Type) throws -> JSON where JSON: Codable
 }
 
-
 extension JSONInteractor {
     func loadJSON<JSON>(url: URL, type: JSON.Type) throws -> JSON where JSON: Codable {
         let data = try Data(contentsOf: url)

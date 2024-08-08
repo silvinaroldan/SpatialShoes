@@ -1,0 +1,65 @@
+[
+    {
+        "id": 10123,
+        "name": "Urban Explorer",
+        "brand": "UrbanStride",
+        "size": [
+            38,
+            39,
+            40,
+            41,
+            42
+        ],
+        "price": 99.99,
+        "description": "Descubre la combinaci\u00f3n perfecta entre estilo y comodidad con nuestras **Urban Explorer** de **UrbanStride**. Dise\u00f1adas para aquellos que buscan un calzado vers\u00e1til y moderno, estas botas de cuero tipo zapatillas ofrecen una apariencia robusta y sofisticada sin sacrificar el confort. Confeccionadas con cuero de alta calidad, estas botas son ideales tanto para el d\u00eda a d\u00eda como para ocasiones especiales.\n\n**Caracter\u00edsticas Destacadas:**\n- **Material:** Cuero genuino que proporciona durabilidad y un acabado premium.\n- **Dise\u00f1o:** Una fusi\u00f3n de la cl\u00e1sica bota y la moderna zapatilla, perfecta para cualquier atuendo.\n- **Comodidad:** Plantilla acolchada y soporte \u00f3ptimo para largas jornadas.\n- **Versatilidad:** Disponible en m\u00faltiples tallas para adaptarse a todas tus necesidades.\n\nD\u00e9jate seducir por el estilo atemporal y la elegancia de nuestras **Urban Explorer**, y lleva tu look al siguiente nivel.",
+        "model3DName": "leatherShoes",
+        "type": "Botas",
+        "materials": [
+            "Cuero"
+        ],
+        "origin": "Alemania",
+        "gender": "Unisex",
+        "weight": 1.2,
+        "colors": [
+            "Negro",
+            "Marr\u00f3n"
+        ],
+        "warranty": 2,
+        "certifications": [
+            "Certificaci\u00f3n de Calidad",
+            "Hecho a mano"
+        ]
+    },
+    {
+        "id": 10234,
+        "name": "Retro Runner",
+        "brand": "EleganceWalk",
+        "size": [
+            39,
+            40,
+            41,
+            42,
+            43
+        ],
+        "price": 79.99,
+        "description": "Revive el encanto del pasado con nuestras **Retro Runner** de **EleganceWalk**. Inspirados en el estilo deportivo de anta\u00f1o, estos zapatos deportivos retro ofrecen un dise\u00f1o aut\u00e9ntico y una comodidad excepcional. Perfectos para los amantes de la moda vintage que buscan destacarse con un toque cl\u00e1sico y deportivo.\n\n**Caracter\u00edsticas Destacadas:**\n- **Material:** Cuero y materiales sint\u00e9ticos de alta calidad que garantizan durabilidad y estilo.\n- **Dise\u00f1o:** Aut\u00e9ntico estilo retro que combina funcionalidad y moda.\n- **Comodidad:** Plantilla ergon\u00f3mica y suela acolchada para un confort superior.\n- **Versatilidad:** Ideal para uso diario o actividades deportivas ligeras, disponibles en varias tallas.\n\nHaz una declaraci\u00f3n de estilo con nuestras **Retro Runner** y a\u00f1ade un toque vintage a tu colecci\u00f3n de calzado.",
+        "model3DName": "oldFashionSportShoes",
+        "type": "Deportivas",
+        "materials": [
+            "Cuero"
+        ],
+        "origin": "Alemania",
+        "gender": "Unisex",
+        "weight": 1.2,
+        "colors": [
+            "Rojo",
+            "Blanco",
+            "Negro"
+        ],
+        "warranty": 2,
+        "certifications": [
+            "Certificaci\u00f3n de Sostenibilidad",
+            "Hecho a mano"
+        ]
+    }
+]

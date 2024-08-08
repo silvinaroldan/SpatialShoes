@@ -9,9 +9,8 @@ import SwiftUI
 
 @Observable
 final class ShoesViewModel {
-    
     let interactor: DataInteractor
-    
+
     var shoes: [ShoeModel]
     var errorMsg = ""
     var showAlert = false
@@ -26,5 +25,4 @@ final class ShoesViewModel {
             showAlert.toggle()
         }
     }
-    
 }
