@@ -40,11 +40,17 @@ Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar 
 - [x] Crear un catálogo que muestre toda la información y los modelos.
     - [x] Obtener los valores del Json
     - [x] Mostrar la lista de las zapatillas con sus datos
-    - [ ] Cargar los modelos 3D
-    - [ ] Mostrar los modelos 3D
+    - [x] Cargar los modelos 3D
+    - [x] Mostrar los modelos 3D
     - [ ] Error handler
 
 - [ ] Los modelos podrán manipularse en 3D para poder verlos desde cualquier orientación y tamaño en un modo de visión "libre".
+    - [ ] ver que diferencia hay entre cargar los modelos 3D directamente o en el package que genera reality composer pro
+    - [ ] Terminar de ver el video de bender
+    - [ ] Terminar de ver video n 6
+    - [ ] que es eso de vision libre?
+    - [ ] Como hacer para
+    - [ ] Ver como esta el hello world de apple
 - [ ] También existirá un modo "expositor" que podrá elegirse en la pantalla para que el modelo gire de manera continua y automática.
 - [ ] Podrá pulsarse en un modelo 3D para verlo en una ventana volumétrica de manera exclusiva y en más detalle.
 - [ ] Se podrá marcar como favorito cualquiera de los modelos.
