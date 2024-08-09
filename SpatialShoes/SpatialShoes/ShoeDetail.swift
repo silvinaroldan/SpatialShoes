@@ -5,19 +5,23 @@
 //  Created by Silvina Roldan on 08/08/2024.
 //
 
+import RealityKit
 import SwiftUI
 
 struct ShoeDetail: View {
-   let selectedShoe: ShoeModel
-    
+    let selectedShoe: ShoeModel
+
     var body: some View {
-        Form {
-            LabeledContent("Brand:", value: "\(selectedShoe.brand)")
+        Model3D(named: selectedShoe.model3DName) { model in
+            model.resizable()
+                .scaledToFit()
+                .frame(width: 300)
+        } placeholder: {
+            ProgressView()
         }
-        .navigationTitle(selectedShoe.name)
     }
 }
 
-#Preview {
-    ShoeDetail(selectedShoe: ShoeModel.test)
+#Preview(windowStyle: .automatic) {
+    ShoeDetail(selectedShoe: .test)
 }

@@ -12,7 +12,7 @@ final class ShoesViewModel {
     let interactor: DataInteractor
 
     var shoes: [ShoeModel]
-    var errorMsg = ""
+    @ObservationIgnored var errorMsg = ""
     var showAlert = false
 
     init(interactor: DataInteractor = Interactor()) {

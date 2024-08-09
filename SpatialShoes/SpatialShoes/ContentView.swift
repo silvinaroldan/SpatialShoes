@@ -24,7 +24,7 @@ struct ContentView: View {
             .navigationSplitViewColumnWidth(230)
         } content: {
             if let selectedShoe {
-               ShoeDetail(selectedShoe: selectedShoe)
+                ShoeDetail(selectedShoe: selectedShoe)
             } else {
                 Text("Select a shoe from the list")
             }
@@ -37,5 +37,5 @@ struct ContentView: View {
 }
 
 #Preview(windowStyle: .automatic) {
-    ContentView.preview
+    ContentView()
 }
