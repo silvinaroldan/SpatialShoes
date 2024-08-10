@@ -18,13 +18,10 @@
 		3568A5AF2C64383500965260 /* ShoesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568A5AE2C64383500965260 /* ShoesViewModel.swift */; };
 		356F74492C665FF300AE3AF7 /* OldManShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F74342C665FF000AE3AF7 /* OldManShoes.usdz */; };
 		356F744A2C665FF300AE3AF7 /* ArntShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F74352C665FF000AE3AF7 /* ArntShoes.usdz */; };
-		356F744B2C665FF300AE3AF7 /* oldFashionSportShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F74362C665FF000AE3AF7 /* oldFashionSportShoes.usdz */; };
 		356F744C2C665FF300AE3AF7 /* RedHighHeelShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F74372C665FF000AE3AF7 /* RedHighHeelShoes.usdz */; };
 		356F744D2C665FF300AE3AF7 /* militaryShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F74382C665FF000AE3AF7 /* militaryShoes.usdz */; };
 		356F744E2C665FF300AE3AF7 /* ProvocativePinkShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F74392C665FF000AE3AF7 /* ProvocativePinkShoes.usdz */; };
 		356F744F2C665FF300AE3AF7 /* SkateShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F743A2C665FF100AE3AF7 /* SkateShoes.usdz */; };
-		356F74502C665FF300AE3AF7 /* leatherShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F743B2C665FF100AE3AF7 /* leatherShoes.usdz */; };
-		356F74512C665FF300AE3AF7 /* FemaleShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F743C2C665FF100AE3AF7 /* FemaleShoes.usdz */; };
 		356F74522C665FF300AE3AF7 /* CanguroShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F743D2C665FF100AE3AF7 /* CanguroShoes.usdz */; };
 		356F74532C665FF300AE3AF7 /* CanvasShoe.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F743E2C665FF100AE3AF7 /* CanvasShoe.usdz */; };
 		356F74542C665FF300AE3AF7 /* MoonShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F743F2C665FF100AE3AF7 /* MoonShoes.usdz */; };
@@ -37,6 +34,7 @@
 		356F745B2C665FF300AE3AF7 /* JapaneseShoesGeta.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F74462C665FF200AE3AF7 /* JapaneseShoesGeta.usdz */; };
 		356F745C2C665FF300AE3AF7 /* BlueVansShoe.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F74472C665FF200AE3AF7 /* BlueVansShoe.usdz */; };
 		356F745D2C665FF300AE3AF7 /* WoodShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F74482C665FF200AE3AF7 /* WoodShoes.usdz */; };
+		356F74622C67049500AE3AF7 /* FemaleShoes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 356F74612C67049500AE3AF7 /* FemaleShoes.usdz */; };
 		357990C52C650348007BD9B6 /* ShoeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357990C42C650348007BD9B6 /* ShoeDetail.swift */; };
 		357990C72C650B2D007BD9B6 /* shoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 357990C62C650B2D007BD9B6 /* shoesTest.json */; };
 		357990C92C650BA2007BD9B6 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357990C82C650BA2007BD9B6 /* DataTest.swift */; };
@@ -56,13 +54,10 @@
 		3568A5AE2C64383500965260 /* ShoesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesViewModel.swift; sourceTree = "<group>"; };
 		356F74342C665FF000AE3AF7 /* OldManShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = OldManShoes.usdz; sourceTree = "<group>"; };
 		356F74352C665FF000AE3AF7 /* ArntShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ArntShoes.usdz; sourceTree = "<group>"; };
-		356F74362C665FF000AE3AF7 /* oldFashionSportShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = oldFashionSportShoes.usdz; sourceTree = "<group>"; };
 		356F74372C665FF000AE3AF7 /* RedHighHeelShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = RedHighHeelShoes.usdz; sourceTree = "<group>"; };
 		356F74382C665FF000AE3AF7 /* militaryShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = militaryShoes.usdz; sourceTree = "<group>"; };
 		356F74392C665FF000AE3AF7 /* ProvocativePinkShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ProvocativePinkShoes.usdz; sourceTree = "<group>"; };
 		356F743A2C665FF100AE3AF7 /* SkateShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = SkateShoes.usdz; sourceTree = "<group>"; };
-		356F743B2C665FF100AE3AF7 /* leatherShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = leatherShoes.usdz; sourceTree = "<group>"; };
-		356F743C2C665FF100AE3AF7 /* FemaleShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = FemaleShoes.usdz; sourceTree = "<group>"; };
 		356F743D2C665FF100AE3AF7 /* CanguroShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = CanguroShoes.usdz; sourceTree = "<group>"; };
 		356F743E2C665FF100AE3AF7 /* CanvasShoe.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = CanvasShoe.usdz; sourceTree = "<group>"; };
 		356F743F2C665FF100AE3AF7 /* MoonShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = MoonShoes.usdz; sourceTree = "<group>"; };
@@ -75,6 +70,7 @@
 		356F74462C665FF200AE3AF7 /* JapaneseShoesGeta.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = JapaneseShoesGeta.usdz; sourceTree = "<group>"; };
 		356F74472C665FF200AE3AF7 /* BlueVansShoe.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = BlueVansShoe.usdz; sourceTree = "<group>"; };
 		356F74482C665FF200AE3AF7 /* WoodShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = WoodShoes.usdz; sourceTree = "<group>"; };
+		356F74612C67049500AE3AF7 /* FemaleShoes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = FemaleShoes.usdz; sourceTree = "<group>"; };
 		357990C42C650348007BD9B6 /* ShoeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDetail.swift; sourceTree = "<group>"; };
 		357990C62C650B2D007BD9B6 /* shoesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shoesTest.json; sourceTree = "<group>"; };
 		357990C82C650BA2007BD9B6 /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
@@ -187,6 +183,7 @@
 		356F74332C665FCE00AE3AF7 /* Shoes3D */ = {
 			isa = PBXGroup;
 			children = (
+				356F74612C67049500AE3AF7 /* FemaleShoes.usdz */,
 				356F74442C665FF200AE3AF7 /* AirJordan.usdz */,
 				356F74412C665FF200AE3AF7 /* AirSportShoe.usdz */,
 				356F74352C665FF000AE3AF7 /* ArntShoes.usdz */,
@@ -194,14 +191,11 @@
 				356F743D2C665FF100AE3AF7 /* CanguroShoes.usdz */,
 				356F743E2C665FF100AE3AF7 /* CanvasShoe.usdz */,
 				356F74402C665FF100AE3AF7 /* fashionSportShoe.usdz */,
-				356F743C2C665FF100AE3AF7 /* FemaleShoes.usdz */,
 				356F74462C665FF200AE3AF7 /* JapaneseShoesGeta.usdz */,
-				356F743B2C665FF100AE3AF7 /* leatherShoes.usdz */,
 				356F74422C665FF200AE3AF7 /* MaleShoes.usdz */,
 				356F74382C665FF000AE3AF7 /* militaryShoes.usdz */,
 				356F743F2C665FF100AE3AF7 /* MoonShoes.usdz */,
 				356F74432C665FF200AE3AF7 /* NBSportShoes.usdz */,
-				356F74362C665FF000AE3AF7 /* oldFashionSportShoes.usdz */,
 				356F74342C665FF000AE3AF7 /* OldManShoes.usdz */,
 				356F74392C665FF000AE3AF7 /* ProvocativePinkShoes.usdz */,
 				356F74372C665FF000AE3AF7 /* RedHighHeelShoes.usdz */,
@@ -277,7 +271,6 @@
 				356F744F2C665FF300AE3AF7 /* SkateShoes.usdz in Resources */,
 				356F74552C665FF300AE3AF7 /* fashionSportShoe.usdz in Resources */,
 				356F74522C665FF300AE3AF7 /* CanguroShoes.usdz in Resources */,
-				356F74512C665FF300AE3AF7 /* FemaleShoes.usdz in Resources */,
 				3568A5992C63ACBC00965260 /* Preview Assets.xcassets in Resources */,
 				356F74582C665FF300AE3AF7 /* NBSportShoes.usdz in Resources */,
 				356F74492C665FF300AE3AF7 /* OldManShoes.usdz in Resources */,
@@ -286,11 +279,10 @@
 				356F745B2C665FF300AE3AF7 /* JapaneseShoesGeta.usdz in Resources */,
 				356F745C2C665FF300AE3AF7 /* BlueVansShoe.usdz in Resources */,
 				3568A5A12C63B30400965260 /* shoes.json in Resources */,
+				356F74622C67049500AE3AF7 /* FemaleShoes.usdz in Resources */,
 				356F744C2C665FF300AE3AF7 /* RedHighHeelShoes.usdz in Resources */,
 				356F745D2C665FF300AE3AF7 /* WoodShoes.usdz in Resources */,
-				356F744B2C665FF300AE3AF7 /* oldFashionSportShoes.usdz in Resources */,
 				356F74562C665FF300AE3AF7 /* AirSportShoe.usdz in Resources */,
-				356F74502C665FF300AE3AF7 /* leatherShoes.usdz in Resources */,
 				3568A5962C63ACBC00965260 /* Assets.xcassets in Resources */,
 				356F74542C665FF300AE3AF7 /* MoonShoes.usdz in Resources */,
 				356F74572C665FF300AE3AF7 /* MaleShoes.usdz in Resources */,

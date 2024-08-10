@@ -12,12 +12,24 @@ struct ShoeDetail: View {
     let selectedShoe: ShoeModel
 
     var body: some View {
-        Model3D(named: selectedShoe.model3DName) { model in
-            model.resizable()
-                .scaledToFit()
-                .frame(width: 300)
-        } placeholder: {
-            ProgressView()
+        VStack {
+            RealityView { content in
+                async let shoeEntity = Entity(named: selectedShoe.model3DName)
+                if let shoe = try? await shoeEntity {
+                    //shoe.scale *= 0.2
+                    //shoe.position.y -= 0.02
+                    content.add(shoe)
+
+                }
+            } 
+//            Model3D(named: selectedShoe.model3DName) { model in
+//                model.resizable()
+//                    .scaledToFit()
+//                    .frame(width: 400)
+//                    .background(Color.green)
+//            } placeholder: {
+//                ProgressView()
+//            }
         }
     }
 }
