@@ -13,23 +13,23 @@ struct ShoeDetail: View {
 
     var body: some View {
         VStack {
-            RealityView { content in
-                async let shoeEntity = Entity(named: selectedShoe.model3DName)
-                if let shoe = try? await shoeEntity {
-                    //shoe.scale *= 0.2
-                    //shoe.position.y -= 0.02
-                    content.add(shoe)
-
-                }
-            } 
-//            Model3D(named: selectedShoe.model3DName) { model in
-//                model.resizable()
-//                    .scaledToFit()
-//                    .frame(width: 400)
-//                    .background(Color.green)
-//            } placeholder: {
-//                ProgressView()
-//            }
+//            RealityView { content in
+//                async let shoeEntity = Entity(named: selectedShoe.model3DName)
+//                if let shoe = try? await shoeEntity {
+//                    //shoe.scale *= 0.2
+//                    //shoe.position.y -= 0.02
+//                    content.add(shoe)
+//
+//                }
+//            } 
+            Model3D(named: selectedShoe.model3DName) { model in
+                model.resizable()
+                    .frame(width: 400, height: 400)
+                    .scaledToFit()
+                    .background(Color.green)
+            } placeholder: {
+                ProgressView()
+            }
         }
     }
 }
