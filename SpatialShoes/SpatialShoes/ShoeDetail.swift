@@ -7,6 +7,7 @@
 
 import RealityKit
 import SwiftUI
+import SpatialShoesRC
 
 struct ShoeDetail: View {
     let selectedShoe: ShoeModel
@@ -16,13 +17,13 @@ struct ShoeDetail: View {
 //            RealityView { content in
 //                async let shoeEntity = Entity(named: selectedShoe.model3DName)
 //                if let shoe = try? await shoeEntity {
-//                    //shoe.scale *= 0.2
-//                    //shoe.position.y -= 0.02
+//                    shoe.scale *= 0.2
+//                    shoe.position.y -= 0.02
 //                    content.add(shoe)
 //
 //                }
 //            } 
-            Model3D(named: selectedShoe.model3DName) { model in
+            Model3D(named: "NBSportShoes", bundle: spatialShoesRCBundle) { model in
                 model.resizable()
                     .frame(width: 400, height: 400)
                     .scaledToFit()

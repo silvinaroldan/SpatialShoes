@@ -28,7 +28,7 @@ extension ShoeModel {
                                         39],
                                 price: 119.99,
                                 description: "Descubre la sofisticacif3n y el estilo con nuestros **Elegant Heels** de **EleganceWalk**. Disf1ados para las mujeres que buscan destacar en cualquier evento, estos zapatos de tacf3n ofrecen una combinacin perfecta de elegancia y comodidad. Ideales para ocasiones especiales y eventos formales.\n\n**Caracteredsticas Destacadas:**\n- **Material:** Cuero de alta calidad que proporciona un acabado lujoso y duradero",
-                                model3DName: "FemaleShoes",
+                                model3DName: "SkateShoes",
                                 type: "Tacones",
                                 materials: [
                                 "Cuero"],
