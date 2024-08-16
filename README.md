@@ -43,6 +43,7 @@ Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar 
     - [x] Cargar los modelos 3D
     - [x] Mostrar los modelos 3D
     - [ ] Error handler
+    - [ ] **Atencion a esto!!** **en el json de los planetas se usa una escala "scale": [0.003506540175362943,0.003506540175362943, 0.003506540175362943], segun el planeta, probar lo mismo para tus modelos 3D**
 
 - [ ] Los modelos podrán manipularse en 3D para poder verlos desde cualquier orientación y tamaño en un modo de visión "libre".
     - [x] ver que diferencia hay entre cargar los modelos 3D directamente o en el package que genera reality composer pro
