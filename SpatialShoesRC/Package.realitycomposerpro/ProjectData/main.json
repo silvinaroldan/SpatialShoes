@@ -1,8 +1,13 @@
 {
   "pathsToIds" : {
+    "SpatialShoesRC\/Sources\/SpatialShoesRC\/SpatialShoesRC.rkassets\/ArntShoes.usdz" : "3BD462AA-5EBF-4159-81EC-DA68814BE6BD",
     "SpatialShoesRC\/Sources\/SpatialShoesRC\/SpatialShoesRC.rkassets\/FemaleShoes.usdz" : "D4CFFFD6-060F-4774-8B02-8E41733628C6",
     "SpatialShoesRC\/Sources\/SpatialShoesRC\/SpatialShoesRC.rkassets\/NBSportShoes.usdz" : "222AC534-49C3-49CA-BB0A-951A4BA4F21A",
+    "SpatialShoesRC\/Sources\/SpatialShoesRC\/SpatialShoesRC.rkassets\/oldFashionSportShoes.usdz" : "59B26354-2CF7-4664-9260-9AF1748D573F",
     "SpatialShoesRC\/Sources\/SpatialShoesRC\/SpatialShoesRC.rkassets\/Scene.usda" : "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
-    "SpatialShoesRC\/Sources\/SpatialShoesRC\/SpatialShoesRC.rkassets\/SkateShoes.usdz" : "79B55F6E-E68B-4A56-8B67-BBEBE0A24B0E"
+    "SpatialShoesRC\/Sources\/SpatialShoesRC\/SpatialShoesRC.rkassets\/SkateShoes copy.usdz" : "B30F06E5-EB70-46F6-BF0B-19BAC442B9B4",
+    "SpatialShoesRC\/Sources\/SpatialShoesRC\/SpatialShoesRC.rkassets\/SkateShoes.usdz" : "79B55F6E-E68B-4A56-8B67-BBEBE0A24B0E",
+    "SpatialShoesRC\/Sources\/SpatialShoesRC\/SpatialShoesRC.rkassets\/SkateShoes1.usdz" : "277A4352-0BBA-4692-844F-8E84C1275F2C",
+    "SpatialShoesRC\/Sources\/SpatialShoesRC\/SpatialShoesRC.rkassets\/Untitled%20Scene.usda" : "F5A7C3E2-FA82-446F-BF41-044380AD2DD2"
   }
 }

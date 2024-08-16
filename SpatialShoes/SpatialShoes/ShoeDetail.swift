@@ -23,9 +23,9 @@ struct ShoeDetail: View {
 //
 //                }
 //            } 
-            Model3D(named: "NBSportShoes", bundle: spatialShoesRCBundle) { model in
+            Model3D(named: "CanguroShoes", bundle: spatialShoesRCBundle) { model in
                 model.resizable()
-                    .frame(width: 400, height: 400)
+                    .frame(width: 400, height: 200)
                     .scaledToFit()
                     .background(Color.green)
             } placeholder: {

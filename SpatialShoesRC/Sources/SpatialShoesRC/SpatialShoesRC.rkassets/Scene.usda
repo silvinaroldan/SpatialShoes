@@ -10,24 +10,14 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["f", "f"]
-    def "NBSportShoes" (
+    def "CanguroShoes" (
         active = true
-        prepend references = @NBSportShoes.usdz@
+        prepend references = @CanguroShoes.usdz@
     )
     {
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0, 0, 0)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-
-    def "SkateShoes" (
-        active = true
-        prepend references = @SkateShoes.usdz@
-    )
-    {
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0, 0, 0)
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.00009776711, 0.00009776711, 0.00009776711)
+        float3 xformOp:translate = (0, 0.0078791715, 0.0015054233)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 }
