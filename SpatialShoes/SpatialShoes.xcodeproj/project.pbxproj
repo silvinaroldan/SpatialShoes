@@ -20,6 +20,9 @@
 		357990C52C650348007BD9B6 /* ShoeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357990C42C650348007BD9B6 /* ShoeDetail.swift */; };
 		357990C72C650B2D007BD9B6 /* shoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 357990C62C650B2D007BD9B6 /* shoesTest.json */; };
 		357990C92C650BA2007BD9B6 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357990C82C650BA2007BD9B6 /* DataTest.swift */; };
+		35AEA8322C6FDE0B00C40C3F /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AEA8312C6FDE0B00C40C3F /* Shoe.swift */; };
+		35AEA8342C6FDE1B00C40C3F /* ShoeControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AEA8332C6FDE1B00C40C3F /* ShoeControls.swift */; };
+		35AEA8362C6FDF6000C40C3F /* ShoeGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AEA8352C6FDF6000C40C3F /* ShoeGrid.swift */; };
 		35C817782C6FA347007AD378 /* ShoeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C817772C6FA347007AD378 /* ShoeContent.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		357990C42C650348007BD9B6 /* ShoeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDetail.swift; sourceTree = "<group>"; };
 		357990C62C650B2D007BD9B6 /* shoesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shoesTest.json; sourceTree = "<group>"; };
 		357990C82C650BA2007BD9B6 /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
+		35AEA8312C6FDE0B00C40C3F /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
+		35AEA8332C6FDE1B00C40C3F /* ShoeControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeControls.swift; sourceTree = "<group>"; };
+		35AEA8352C6FDF6000C40C3F /* ShoeGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeGrid.swift; sourceTree = "<group>"; };
 		35C817772C6FA347007AD378 /* ShoeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				3568A5912C63ACBB00965260 /* SpatialShoesApp.swift */,
+				35AEA8312C6FDE0B00C40C3F /* Shoe.swift */,
+				35AEA8352C6FDF6000C40C3F /* ShoeGrid.swift */,
+				35AEA8332C6FDE1B00C40C3F /* ShoeControls.swift */,
 				3568A5932C63ACBB00965260 /* ContentView.swift */,
 				35C817772C6FA347007AD378 /* ShoeContent.swift */,
 				357990C42C650348007BD9B6 /* ShoeDetail.swift */,
@@ -239,6 +248,9 @@
 				35C817782C6FA347007AD378 /* ShoeContent.swift in Sources */,
 				357990C52C650348007BD9B6 /* ShoeDetail.swift in Sources */,
 				3568A5922C63ACBB00965260 /* SpatialShoesApp.swift in Sources */,
+				35AEA8322C6FDE0B00C40C3F /* Shoe.swift in Sources */,
+				35AEA8342C6FDE1B00C40C3F /* ShoeControls.swift in Sources */,
+				35AEA8362C6FDF6000C40C3F /* ShoeGrid.swift in Sources */,
 				3568A5AF2C64383500965260 /* ShoesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

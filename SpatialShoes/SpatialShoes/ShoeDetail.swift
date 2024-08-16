@@ -24,9 +24,10 @@ struct ShoeDetail: View {
 //                }
 //            } 
             Model3D(named: selectedShoe.model3DName, bundle: spatialShoesRCBundle) { model in
-                model.resizable()
-                    .frame(width: 400, height: 200)
+                model
+                    .resizable()
                     .scaledToFit()
+                    .scaleEffect(0.3)
                     .background(Color.green)
             } placeholder: {
                 ProgressView()
