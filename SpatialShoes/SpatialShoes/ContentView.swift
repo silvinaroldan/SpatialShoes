@@ -24,11 +24,17 @@ struct ContentView: View {
             .navigationSplitViewColumnWidth(230)
         } content: {
             if let selectedShoe {
+                ShoeContent(selectedShoe: selectedShoe)
+            }
+        } detail: {
+            if let selectedShoe {
                 ShoeDetail(selectedShoe: selectedShoe)
             } else {
                 Text("Select a shoe from the list")
             }
-        } detail: {}
+            
+            
+        }
             .alert("App Error", isPresented: $shoesVM.showAlert) {}
             message: {
                 Text(shoesVM.errorMsg)
