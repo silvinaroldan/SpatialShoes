@@ -6,28 +6,19 @@
 //
 
 import RealityKit
-import SwiftUI
 import SpatialShoesRC
+import SwiftUI
 
 struct ShoeDetail: View {
     let selectedShoe: ShoeModel
 
     var body: some View {
         VStack {
-//            RealityView { content in
-//                async let shoeEntity = Entity(named: selectedShoe.model3DName)
-//                if let shoe = try? await shoeEntity {
-//                    shoe.scale *= 0.2
-//                    shoe.position.y -= 0.02
-//                    content.add(shoe)
-//
-//                }
-//            } 
             Model3D(named: selectedShoe.model3DName, bundle: spatialShoesRCBundle) { model in
                 model
-                    .resizable()
-                    .scaledToFit()
-                    .scaleEffect(0.3)
+//                    .resizable()
+//                    .scaledToFit()
+//                    .scaleEffect(0.3)
                     .background(Color.green)
             } placeholder: {
                 ProgressView()

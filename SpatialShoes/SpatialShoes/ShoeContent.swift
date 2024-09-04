@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ShoeContent: View {
     let selectedShoe: ShoeModel
-    
+    @Environment(\.openWindow) private var open
+
     var body: some View {
         Button {
-            //
+            open(id: "shoe3D")
         } label: {
             Text("View \(selectedShoe.name)")
         }
-
     }
 }
 

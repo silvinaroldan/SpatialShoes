@@ -12,8 +12,10 @@ final class ShoesViewModel {
     let interactor: DataInteractor
 
     var shoes: [ShoeModel]
-    @ObservationIgnored var errorMsg = ""
     var showAlert = false
+    var selectedShoe: ShoeModel?
+
+    @ObservationIgnored var errorMsg = ""
 
     init(interactor: DataInteractor = Interactor()) {
         self.interactor = interactor

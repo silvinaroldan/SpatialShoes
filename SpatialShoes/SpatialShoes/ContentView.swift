@@ -9,12 +9,13 @@ import RealityKit
 import SwiftUI
 
 struct ContentView: View {
-    @State var shoesVM = ShoesViewModel()
-    @State var selectedShoe: ShoeModel?
+    @Environment(ShoesViewModel.self) private var shoesVM
 
     var body: some View {
+        @Bindable var shoeBindable = shoesVM
+
         NavigationSplitView {
-            List(selection: $selectedShoe) {
+            List(selection: $shoeBindable.selectedShoe) {
                 ForEach(shoesVM.shoes) { shoe in
                     Text(shoe.name)
                         .tag(shoe)
@@ -23,22 +24,21 @@ struct ContentView: View {
             .navigationTitle("Shoes")
             .navigationSplitViewColumnWidth(230)
         } content: {
-            if let selectedShoe {
+            if let selectedShoe = shoesVM.selectedShoe {
                 ShoeContent(selectedShoe: selectedShoe)
             }
         } detail: {
-            if let selectedShoe {
+            if let selectedShoe = shoesVM.selectedShoe {
                 ShoeDetail(selectedShoe: selectedShoe)
             } else {
                 Text("Select a shoe from the list")
             }
-            
-            
         }
-            .alert("App Error", isPresented: $shoesVM.showAlert) {}
-            message: {
-                Text(shoesVM.errorMsg)
-            }
+        .alert("App Error", isPresented:
+            $shoeBindable.showAlert) {}
+        message: {
+            Text(shoesVM.errorMsg)
+        }
     }
 }
 
