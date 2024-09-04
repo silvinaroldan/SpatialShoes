@@ -21,7 +21,7 @@ struct ContentView: View {
                         .tag(shoe)
                 }
             }
-            .navigationTitle("Shoes")
+            .navigationTitle("Spatial Shoes")
             .navigationSplitViewColumnWidth(230)
         } content: {
             if let selectedShoe = shoesVM.selectedShoe {
@@ -33,6 +33,9 @@ struct ContentView: View {
             } else {
                 Text("Select a shoe from the list")
             }
+        }
+        .onAppear {
+            shoesVM.selectedShoe = shoesVM.shoes.first
         }
         .alert("App Error", isPresented:
             $shoeBindable.showAlert) {}
