@@ -11,6 +11,7 @@ import SwiftUI
 
 struct ShoeDetail: View {
     let selectedShoe: ShoeModel
+    @AppStorage("ShoeIsFavorite") var shoeIsFavorite = false
     
     @Binding var touch: Bool
     @Binding var rotate: Bool
@@ -22,6 +23,13 @@ struct ShoeDetail: View {
  
     @State var initialScale: CGFloat = 0.6
     @State private var scaleMagnified: Double = 0.6
+    
+    init(selectedShoe: ShoeModel, touch: Binding<Bool>, rotate: Binding<Bool>) {
+        self.selectedShoe = selectedShoe
+        _touch = touch
+        _rotate = rotate
+        _shoeIsFavorite = AppStorage(wrappedValue: shoeIsFavorite, selectedShoe.favoriteKey)
+    }
     
     var body: some View {
         VStack {
@@ -70,6 +78,9 @@ struct ShoeDetail: View {
         }
         .onAppear {
             doRotation()
+        }
+        .toolbar {
+            Toggle("Favorite", systemImage: "star", isOn: $shoeIsFavorite)
         }
     
     }

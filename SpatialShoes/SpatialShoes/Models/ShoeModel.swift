@@ -23,4 +23,8 @@ struct ShoeModel: Codable, Identifiable, Hashable {
     let colors: [String]
     let warranty: Int
     let certifications: [String]
+    
+    var favoriteKey: String {
+        "Favorite-\(id)"
+    }
 }
