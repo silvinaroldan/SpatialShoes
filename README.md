@@ -42,27 +42,32 @@ Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar 
     - [x] Mostrar la lista de las zapatillas con sus datos
     - [x] Cargar los modelos 3D
     - [x] Mostrar los modelos 3D
+     
+    Plus        
     - [ ] Error handler
-    - [ ] Agregar rotacion en vertical tambien
+  
     - [ ] **Atencion a esto!!** **en el json de los planetas se usa una escala "scale": [0.003506540175362943,0.003506540175362943, 0.003506540175362943], segun el planeta, probar lo mismo para tus modelos 3D**
 
     - [ ] Los modelos podrán manipularse en 3D para poder verlos desde cualquier orientación y tamaño en un modo de visión "libre".
+    - [ ] Agregar rotacion en vertical tambien
     - [x] ver que diferencia hay entre cargar los modelos 3D directamente o en el package que genera reality composer pro
       La diferencia es lo que podes hacer porque el modelo esta pegado a la vista entonces quedas limitado a lo que se puede hacer solo con una vista.
     - [x] Terminar de ver el video de bender
     - [x] Terminar de ver video n 6
     - [x] que es eso de vision libre?
 
-- [ ] Mostrar los detalles de cada zapato
-- [ ] Agregar el toolbar con las opciones de ver detalle, rotar (que seria el modo expositor), magnify
-- [ ] Cuando se haga click en ver detalle mostrar el modelo 3D volumetrico
-- [ ] Veer como seria el manejo de favorito
+- [x] Mostrar los detalles de cada zapato
+- [ ] Formatear el texto
+- [x] Agregar el toolbar con las opciones de ver detalle, rotar (que seria el modo expositor), magnify
+- [ ] Faltaria que cuando toco un boton desaparece el otro si esta seleccionado
+- [x] Cuando se haga click en ver detalle mostrar el modelo 3D volumetrico
+- [ ] Ver como seria el manejo de favorito
 - [ ] Agregar al json la opcion de favoritos
 - [ ] Agregar la opcion de poder seleccionarlo como favorito
 - [ ] Ver el tema de poner un tamano real para cada zapato
 
-    - [x] Ver como esta el hello world de apple
-- [ ] También existirá un modo "expositor" que podrá elegirse en la pantalla para que el modelo gire de manera continua y automática.
+- [x] Ver como esta el hello world de apple
+- [x] También existirá un modo "expositor" que podrá elegirse en la pantalla para que el modelo gire de manera continua y automática.
 - [ ] Podrá pulsarse en un modelo 3D para verlo en una ventana volumétrica de manera exclusiva y en más detalle.
 - [ ] Se podrá marcar como favorito cualquiera de los modelos.
 - [ ] Se generará un layout nuevo para estos favoritos en modo estantería donde podrán verse los modelos 3D rotando de forma continua con su nombre debajo y al pulsarlo se mostrará su ficha en más detalle
