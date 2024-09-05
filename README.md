@@ -65,6 +65,7 @@ Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar 
 - [ ] Agregar al json la opcion de favoritos
 - [ ] Agregar la opcion de poder seleccionarlo como favorito
 - [ ] Ver el tema de poner un tamano real para cada zapato
+- [ ] Ver donde pones el tema de mostrar los favoritos, si los ordenas o no
 
 - [x] Ver como esta el hello world de apple
 - [x] También existirá un modo "expositor" que podrá elegirse en la pantalla para que el modelo gire de manera continua y automática.
