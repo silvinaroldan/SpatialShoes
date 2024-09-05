@@ -45,6 +45,8 @@ Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar 
      
     Plus        
     - [ ] Error handler
+    - [ ] Ordenar por favoritos
+    - [ ] Mostrar la estrella de favoritos adelante de cada nombre en la lista
   
     - [ ] **Atencion a esto!!** **en el json de los planetas se usa una escala "scale": [0.003506540175362943,0.003506540175362943, 0.003506540175362943], segun el planeta, probar lo mismo para tus modelos 3D**
 
@@ -61,9 +63,8 @@ Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar 
 - [x] Agregar el toolbar con las opciones de ver detalle, rotar (que seria el modo expositor), magnify
 - [ ] Faltaria que cuando toco un boton desaparece el otro si esta seleccionado
 - [x] Cuando se haga click en ver detalle mostrar el modelo 3D volumetrico
-- [ ] Ver como seria el manejo de favorito
-- [ ] Agregar al json la opcion de favoritos
-- [ ] Agregar la opcion de poder seleccionarlo como favorito
+- [x] Ver como seria el manejo de favorito
+- [x] Agregar la opcion de poder seleccionarlo como favorito
 - [ ] Ver el tema de poner un tamano real para cada zapato
 - [ ] Ver donde pones el tema de mostrar los favoritos, si los ordenas o no
 
