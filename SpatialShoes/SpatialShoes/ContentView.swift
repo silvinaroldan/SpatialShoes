@@ -10,6 +10,10 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(ShoesViewModel.self) private var shoesVM
+    @Environment(\.openWindow) private var open
+    
+    @State private var rotate = true
+    @State private var touch = false
 
     var body: some View {
         @Bindable var shoeBindable = shoesVM
@@ -23,13 +27,33 @@ struct ContentView: View {
             }
             .navigationTitle("Spatial Shoes")
             .navigationSplitViewColumnWidth(230)
+            .toolbar {
+                ToolbarItem(placement: .bottomOrnament) {
+                    HStack(spacing: 30) {
+                        Toggle(isOn: $rotate) {
+                            Image(systemName: "rotate.3d")
+                        }
+                        .disabled(touch)
+                        Toggle(isOn: $touch) {
+                            Image(systemName: "hand.point.up.left")
+                        }
+                        .disabled(rotate)
+                        Button {
+                            open(id: "shoe3D")
+                        } label: {
+                            Text("Ver en Detalle")
+                        }
+                    }
+                    .toggleStyle(.button)
+                }
+            }
         } content: {
             if let selectedShoe = shoesVM.selectedShoe {
                 ShoeContent(selectedShoe: selectedShoe)
             }
         } detail: {
             if let selectedShoe = shoesVM.selectedShoe {
-                ShoeDetail(selectedShoe: selectedShoe)
+                ShoeDetail(selectedShoe: selectedShoe, touch: $touch, rotate: $rotate)
             } else {
                 Text("Select a shoe from the list")
             }
