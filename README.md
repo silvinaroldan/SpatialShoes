@@ -1,3 +1,103 @@
+SPATIAL SHOES
+
+Construye una app para la tienda Spatial Shoes, que mostrará los modelos
+
+3D junto a los datos de cada modelo de zapato. La forma de construir la
+
+UI es totalmente libre, pero debemos respetar la guía de diseño de
+
+interfaces nativas de Apple.
+
+Existe un archivo shoes.json que tiene toda la información necesaria.
+```
+struct Shoe: Codable {
+
+let id: Int
+let name: String
+let brand: String
+let size: [Int]
+let price: Double
+let description: String
+let model3DName: String
+let type: String
+let materials: [String]
+let origin: String
+let gender: String
+let weight: Double
+let colors: [String]
+let warranty: Int
+let certifications: [String]
+
+}
+```
+Hay que cargar el archivo, que será de solo lectura. Los datos no serán
+
+editables desde la app, solo mostrarán los datos de esta.
+
+Es completamente libre el análisis de los datos y la creación de
+
+enumeraciones a cualquier sub-estructura de información que necesites
+
+para optimizar el catálogo.
+
+En el campo model3DName está el modelo 3D USDZ que se encuentra en la
+
+carpeta 3D. Se deberá crear una archivo en Reality Composer Pro que
+
+contenga todos los modelos para que estén bien organizados.
+
+Todas las tareas a realizar son obligatorias salvo la última del espacio
+
+inmersivo que es opcional para quien quiera ir un poco más allá.
+
+Se pueden crear escenas en Reality Composer Pro si se desea y hay que
+
+gestionar la escala de cada modelo que será diferente para cada caso,
+
+pero en la app deben verse todos del mismo tamaño.
+
+Tareas a realizar:
+
+- Crear un catálogo que muestre toda la información y los modelos.
+
+- Los modelos podrán manipularse en 3D para poder verlos desde cualquier
+
+orientación y tamaño en un modo de visión "libre".
+
+- También existirá un modo "expositor" que podrá elegirse en la pantalla
+
+para que el modelo gire de manera continua y automática.
+
+- Podrá pulsarse en un modelo 3D para verlo en una ventana volumétrica
+
+de manera exclusiva y en más detalle.
+
+- Se podrá marcar como favorito cualquiera de los modelos.
+
+- Se generará un layout nuevo para estos favoritos en modo estantería
+
+donde podrán verse los modelos 3D rotando de forma continua con su
+
+nombre debajo y al pulsarlo se mostrará su ficha en más detalle.
+
+- Se creará un espacio inmersivo donde habrá un carrusel de zapatos.
+
+Aparecerá el primero delante nuestro con unos botones de siguiente o
+
+anterior, que harán que se muestren los demás. Se puede crear haciendo
+
+que entren y salgan de pantalla por opacidad (por ejemplo) o incluso
+
+en una rueda donde veas los demás como se van aproximando. La forma de
+
+presentar este espacio es libre. Pero tienen que poder verse al máximo
+
+de detalle posible mientras lo tengamos "cogido" y al soltarlo volverá
+
+a su posición en el espacio de muestra.
+
+
+-------
 # SpatialShoes
 
 **SPATIAL SHOES**
