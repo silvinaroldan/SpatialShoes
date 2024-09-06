@@ -3,36 +3,6 @@
     "objectMetadataList" : [
       [
         "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
-        "Root",
-        "FemaleShoes",
-        "FemaleShoes"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
-        "Root",
-        "FemaleShoes",
-        "FemaleShoes_1"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
-        "Root",
-        "f",
-        "FemaleShoes_1"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
         "Root"
       ],
       {
@@ -44,6 +14,36 @@
         "Root",
         "f",
         "FemaleShoes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
+        "Root",
+        "FemaleShoes",
+        "FemaleShoes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
+        "Root",
+        "f",
+        "FemaleShoes_1"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
+        "Root",
+        "FemaleShoes",
+        "FemaleShoes_1"
       ],
       {
         "isExpanded" : true,

@@ -12,8 +12,8 @@ struct ContentView: View {
     @Environment(ShoesViewModel.self) private var shoesVM
     @Environment(\.openWindow) private var open
     
-    @State private var rotate = true
-    @State private var touch = false
+    @State private var rotate = false
+    @State private var touch = true
 
     var body: some View {
         @Bindable var shoeBindable = shoesVM

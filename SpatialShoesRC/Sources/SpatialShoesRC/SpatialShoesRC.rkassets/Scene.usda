@@ -11,24 +11,13 @@
 def Xform "Root"
 {
     reorder nameChildren = ["x_", "WinterShoe", "WinterShoe_1"]
-    def "MaleShoes" (
+    def "WoodShoes" (
         active = true
-        prepend references = @MaleShoes.usdz@
-    )
-    {
-        quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (0.00027314867, 0.00027314867, 0.00027314867)
-        float3 xformOp:translate = (0.038298324, -0.0959208, -0.085892566)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-
-    def "OldManShoes" (
-        active = true
-        prepend references = @OldManShoes.usdz@
+        prepend references = @WoodShoes.usdz@
     )
     {
         float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0.031344328, 0, -0.062161565)
+        float3 xformOp:translate = (0, 0, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 }

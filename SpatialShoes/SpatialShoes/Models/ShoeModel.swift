@@ -6,13 +6,16 @@
 //
 
 import Foundation
-
 struct ShoeModel: Codable, Identifiable, Hashable {
+
     let id: Int
     let name: String
     let brand: String
     let size: [Int]
     let price: Double
+    let offsetx: Double
+    let offsety: Double
+    let scale: Double
     let description: String
     let model3DName: String
     let type: String

@@ -21,13 +21,15 @@ struct ShoeDetail: View {
     @State private var lastDragValue: CGFloat = 0.0
     @State private var velocity: CGFloat = 0.0
  
-    @State var initialScale: CGFloat = 0.6
-    @State private var scaleMagnified: Double = 0.6
+    @State var initialScale: CGFloat
+    @State private var scaleMagnified: Double
     
     init(selectedShoe: ShoeModel, touch: Binding<Bool>, rotate: Binding<Bool>) {
         self.selectedShoe = selectedShoe
         _touch = touch
         _rotate = rotate
+        _scaleMagnified = State(initialValue: selectedShoe.scale)
+        _initialScale = State(initialValue: selectedShoe.scale)
         _shoeIsFavorite = AppStorage(wrappedValue: shoeIsFavorite, selectedShoe.favoriteKey)
     }
     
@@ -36,9 +38,11 @@ struct ShoeDetail: View {
                 Model3D(named: selectedShoe.model3DName, bundle: spatialShoesRCBundle) { model in
                     model
                         .resizable()
+                        //.frame(width: 650, height: 500)
                         .scaledToFit()
+                    
                         .scaleEffect(scaleMagnified)
-                        .offset(y: -50)
+                        .offset(x: selectedShoe.offsetx)
                         .rotation3DEffect(.degrees(rotationAngle),
                                           axis: (x: 0, y: -1, z: 0))
                         .rotation3DEffect(.degrees(Double(currentRotation)), axis: (x: 0, y: 1, z: 0))
