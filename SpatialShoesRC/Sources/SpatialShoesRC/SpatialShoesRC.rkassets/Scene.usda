@@ -11,14 +11,5 @@
 def Xform "Root"
 {
     reorder nameChildren = ["x_", "WinterShoe", "WinterShoe_1"]
-    def "WoodShoes" (
-        active = true
-        prepend references = @WoodShoes.usdz@
-    )
-    {
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0, 0, 0)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
 }
 
