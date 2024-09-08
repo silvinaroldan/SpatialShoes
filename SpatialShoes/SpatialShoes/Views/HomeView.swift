@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  SpatialShoes
 //
 //  Created by Silvina Roldan on 07/08/2024.
@@ -8,7 +8,8 @@
 import RealityKit
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
+    
     @Environment(ShoesViewModel.self) private var shoesVM
     @Environment(\.openWindow) private var open
     
@@ -70,5 +71,5 @@ struct ContentView: View {
 }
 
 #Preview(windowStyle: .automatic) {
-    ContentView()
+    HomeView()
 }

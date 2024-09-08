@@ -11,9 +11,9 @@ struct DataTest: DataInteractor {
     var url: URL { Bundle.main.url(forResource: "shoesTest", withExtension: "json")! }
 }
 
-extension ContentView {
+extension HomeView {
     static var preview: some View {
-        ContentView()
+        HomeView()
             .environment(ShoesViewModel(interactor: DataTest()))
     }
 }

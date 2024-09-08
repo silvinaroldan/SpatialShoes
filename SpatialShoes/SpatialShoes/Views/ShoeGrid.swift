@@ -1,5 +1,5 @@
 //
-//  ShoeGrid.swift
+//  Favorites.swift
 //  SpatialShoes
 //
 //  Created by Silvina Roldan on 16/08/2024.
@@ -9,8 +9,7 @@ import RealityKit
 import SpatialShoesRC
 import SwiftUI
 
-struct ShoeGrid: View {
-    
+struct Favorites: View {
     // TODO: change this variable to environment
     // TODO: check why some shoes are repeated
     // TODO: I think that only one model should rotate and not all at once, maybe we should delete this view
@@ -56,5 +55,5 @@ struct ShoeGrid: View {
 }
 
 #Preview {
-    ShoeGrid()
+    Favorites()
 }
