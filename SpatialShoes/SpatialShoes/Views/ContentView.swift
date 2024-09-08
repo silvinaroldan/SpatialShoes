@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-
     var body: some View {
-        TabView() {
+        TabView {
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house")
