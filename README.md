@@ -63,9 +63,10 @@ Tareas a realizar:
 - Los modelos podrán manipularse en 3D para poder verlos desde cualquier
 
 orientación y tamaño en un modo de visión "libre".  
-    - [ ] Solucionar que roto uno y rotan todos
-    - [ ] 
-    - [ ]  
+
+- [ ] Solucionar que roto uno y rotan todos
+- [ ] Solucionar que se cambia una escala y se cambian todas
+- [ ]  
     
     
     
@@ -78,6 +79,7 @@ para que el modelo gire de manera continua y automática.
 - Podrá pulsarse en un modelo 3D para verlo en una ventana volumétrica
 
 de manera exclusiva y en más detalle.
+- [ ] Hacer que se vea mas grande
 
 - Se podrá marcar como favorito cualquiera de los modelos.
 
@@ -86,6 +88,8 @@ de manera exclusiva y en más detalle.
 donde podrán verse los modelos 3D rotando de forma continua con su
 
 nombre debajo y al pulsarlo se mostrará su ficha en más detalle.
+- [ ] Agregar gesto ontap para mostrar la home view con la ficha de este shoe
+- [ ] Agregar nombre por debajo
 
 - Se creará un espacio inmersivo donde habrá un carrusel de zapatos.
 
