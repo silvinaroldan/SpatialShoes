@@ -35,18 +35,16 @@ struct ShoeDetail: View {
     
     var body: some View {
         VStack {
-                Model3D(named: selectedShoe.model3DName, bundle: spatialShoesRCBundle) { model in
-                    model
-                        .resizable()
-                        //.frame(width: 650, height: 500)
-                        .scaledToFit()
-                    
-                        .scaleEffect(scaleMagnified)
-                        .offset(x: selectedShoe.offsetx)
-                        .rotation3DEffect(.degrees(rotationAngle),
-                                          axis: (x: 0, y: -1, z: 0))
-                        .rotation3DEffect(.degrees(Double(currentRotation)), axis: (x: 0, y: 1, z: 0))
-                    .background(Color.green)
+            Model3D(named: selectedShoe.model3DName, bundle: spatialShoesRCBundle) { model in
+                model
+                    .resizable()
+                    .scaledToFit()
+                    .scaleEffect(scaleMagnified)
+                    .offset(x: selectedShoe.offsetx, y: selectedShoe.offsety)
+                    .rotation3DEffect(.degrees(rotationAngle),
+                                      axis: (x: 0, y: -1, z: 0))
+                    .rotation3DEffect(.degrees(Double(currentRotation)), axis: (x: 0, y: 1, z: 0))
+                    //.background(Color.green)
             } placeholder: {
                 ProgressView()
             }
@@ -71,11 +69,11 @@ struct ShoeDetail: View {
                 MagnifyGesture()
                     .onChanged { value in
                         let newScale = (1.0 - (value.magnification)) + initialScale
-                        if newScale > 0.4 && newScale < 1.0 {
+                        if newScale > 0.4, newScale < 1.0 {
                             scaleMagnified = newScale
                         }
                     }
-                    .onEnded { value in
+                    .onEnded { _ in
                         initialScale = scaleMagnified
                     }
             )
@@ -86,7 +84,6 @@ struct ShoeDetail: View {
         .toolbar {
             Toggle("Favorite", systemImage: "star", isOn: $shoeIsFavorite)
         }
-    
     }
     
     func doRotation() {
@@ -100,7 +97,7 @@ struct ShoeDetail: View {
     }
     
     func startInertia() {
-        let inertialTimer =  Timer.scheduledTimer(withTimeInterval: 0.016, repeats: true) { timer in
+        let inertialTimer = Timer.scheduledTimer(withTimeInterval: 0.016, repeats: true) { timer in
             if abs(velocity) < 0.01 {
                 timer.invalidate()
             } else {
