@@ -62,7 +62,14 @@ Tareas a realizar:
 
 - Los modelos podrán manipularse en 3D para poder verlos desde cualquier
 
-orientación y tamaño en un modo de visión "libre".
+orientación y tamaño en un modo de visión "libre".  
+    - [ ] Solucionar que roto uno y rotan todos
+    - [ ] 
+    - [ ]  
+    
+    
+    
+    
 
 - También existirá un modo "expositor" que podrá elegirse en la pantalla
 
