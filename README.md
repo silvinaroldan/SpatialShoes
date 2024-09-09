@@ -81,7 +81,7 @@ para que el modelo gire de manera continua y automática.
 de manera exclusiva y en más detalle.
 
 
-- [ ] Hacer que se vea mas grande
+- [x] Hacer que se vea mas grande
 
 
 
@@ -93,7 +93,8 @@ donde podrán verse los modelos 3D rotando de forma continua con su
 
 nombre debajo y al pulsarlo se mostrará su ficha en más detalle.  
 
-- [ ] Agregar gesto ontap para mostrar la home view con la ficha de este shoe
+- [x] Agregar gesto ontap para mostrar la home view con la ficha de este shoe
+- [ ] Mostrar el detalle del seleccionado
 - [ ] Mostrar solo los favoritos  
 
 
