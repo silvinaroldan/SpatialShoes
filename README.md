@@ -94,7 +94,7 @@ donde podrán verse los modelos 3D rotando de forma continua con su
 nombre debajo y al pulsarlo se mostrará su ficha en más detalle.  
 
 - [x] Agregar gesto ontap para mostrar la home view con la ficha de este shoe
-- [ ] Mostrar el detalle del seleccionado
+- [x] Mostrar el detalle del seleccionado
 - [ ] Mostrar solo los favoritos  
 
 
@@ -117,6 +117,9 @@ a su posición en el espacio de muestra.
 
 
 -------
+Plus  
+- [x] Ver si dejar como esta el tema de ver el detalle de los favoritos en la home o si mostrar una ventana que se abra por debajo como los detalles que se muestran en la seria de bigbangtheory
+
 # SpatialShoes
 
 **SPATIAL SHOES**
