@@ -25,6 +25,6 @@ struct SpatialShoesApp: App {
                 .environment(navigationRouter)
         }
         .windowStyle(.volumetric)
-        .defaultSize(width: 1.0, height: 1.0, depth: 1.0, in: .meters)
+        .defaultSize(width: 0.65, height: 0.65, depth: 0.65, in: .meters)
     }
 }
