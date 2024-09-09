@@ -14,11 +14,14 @@ struct Favorites: View {
     // TODO: I think that only one model should rotate and not all at once, maybe we should delete this view
 
     @Environment(ShoesViewModel.self) private var shoesVM
-    @Environment(\.openWindow) private var open
+    @Environment(NavigationRouter.self) private var router
     @State var rotationAngle: Double = 0.0
 
     // https://www.youtube.com/watch?v=LnPMsG0sV50
     var body: some View {
+        @Bindable var router = router
+        @Bindable var shoesVM = shoesVM
+
         Grid {
             ForEach(0..<4) { rowIndex in
                 GridRow {
@@ -30,19 +33,21 @@ struct Favorites: View {
                                     .resizable()
                                     .scaledToFit()
                                     .scaleEffect(0.5)
-                                    //.background(Color.green)
+                                    // .background(Color.green)
                                     .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
-                                    .onTapGesture {
-                                        shoesVM.selectedShoe = shoesVM.shoes[index]
-                                        // TODO - Goto HomeView()
-                                    }
 
                             } placeholder: {
                                 ProgressView()
                             }
-                            
+
                             .frame(width: 130, height: 130)
-                            Text(shoesVM.shoes[index].name)
+
+                            Button {
+                                router.selectedTab = Tab.home
+                                shoesVM.selectedShoe = shoesVM.shoes[index]
+                            } label: {
+                                Text(shoesVM.shoes[index].name)
+                            }
                         }
                     }
                 }

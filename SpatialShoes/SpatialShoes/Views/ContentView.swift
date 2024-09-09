@@ -7,19 +7,25 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    
+    @Environment(NavigationRouter.self) private var router
+
     var body: some View {
-        TabView {
+        @Bindable var router = router
+        
+        TabView(selection: $router.selectedTab ) {
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
-                .tag("home")
+                .tag(Tab.home)
             Favorites()
                 .tabItem {
                     Label("Favoritos", systemImage: "star")
                 }
-                .tag("favorites")
+                .tag(Tab.favorites)
         }
     }
 }

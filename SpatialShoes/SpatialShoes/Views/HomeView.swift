@@ -59,9 +59,6 @@ struct HomeView: View {
                 Text("Select a shoe from the list")
             }
         }
-        .onAppear {
-            shoesVM.selectedShoe = shoesVM.shoes.first
-        }
         .alert("App Error", isPresented:
             $shoeBindable.showAlert) {}
         message: {
