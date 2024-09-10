@@ -95,7 +95,7 @@ nombre debajo y al pulsarlo se mostrará su ficha en más detalle.
 
 - [x] Agregar gesto ontap para mostrar la home view con la ficha de este shoe
 - [x] Mostrar el detalle del seleccionado
-- [ ] Mostrar solo los favoritos  
+- [x] Mostrar solo los favoritos  
 
 
 
