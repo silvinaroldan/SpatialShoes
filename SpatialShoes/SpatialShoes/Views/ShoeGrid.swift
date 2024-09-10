@@ -10,49 +10,51 @@ import SpatialShoesRC
 import SwiftUI
 
 struct Favorites: View {
-    // TODO: check why some shoes are repeated
-    // TODO: I think that only one model should rotate and not all at once, maybe we should delete this view
 
     @Environment(ShoesViewModel.self) private var shoesVM
     @Environment(NavigationRouter.self) private var router
     @State var rotationAngle: Double = 0.0
 
-    // https://www.youtube.com/watch?v=LnPMsG0sV50
     var body: some View {
         @Bindable var router = router
         @Bindable var shoesVM = shoesVM
 
-        Grid {
-            ForEach(0..<4) { rowIndex in
-                GridRow {
-                    ForEach(0..<6) { columnIndex in
-                        let index = (rowIndex * 4) + columnIndex
-                        VStack(alignment: .center) {
-                            Model3D(named: shoesVM.shoes[index].model3DName, bundle: spatialShoesRCBundle) { model in
-                                model
-                                    .resizable()
-                                    .scaledToFit()
-                                    .scaleEffect(0.5)
-                                    // .background(Color.green)
-                                    .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
+        let favoriteShoes = shoesVM.shoes.filter { shoe in
+            UserDefaults.standard.bool(forKey: shoe.favoriteKey)
+        }
 
-                            } placeholder: {
-                                ProgressView()
-                            }
+        let columns = Array(repeating: GridItem(.flexible(), spacing: 10), count: 5)
 
-                            .frame(width: 130, height: 130)
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 10) {
+                ForEach(favoriteShoes, id: \.self) { item in
 
-                            Button {
-                                router.selectedTab = Tab.home
-                                shoesVM.selectedShoe = shoesVM.shoes[index]
-                            } label: {
-                                Text(shoesVM.shoes[index].name)
-                            }
+                    VStack(alignment: .center) {
+                        Model3D(named: item.model3DName, bundle: spatialShoesRCBundle) { model in
+                            model
+                                .resizable()
+                                .scaledToFit()
+                                .scaleEffect(0.5)
+                                // .background(Color.green)
+                                .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
+
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(width: 130, height: 130, alignment: .center)
+
+                        Button {
+                            router.selectedTab = Tab.home
+                            shoesVM.selectedShoe = item
+                        } label: {
+                            Text(item.name)
                         }
                     }
+                    .padding(20)
                 }
             }
         }
+        .padding(.top)
         .onAppear {
             doRotation()
         }
@@ -71,3 +73,39 @@ struct Favorites: View {
 #Preview {
     Favorites()
 }
+
+//            ForEach(0..<nRows, id: \.self) { rowIndex in
+//                GridRow {
+//                    ForEach(0..<6, id: \.self) { columnIndex in
+//                        let index = (rowIndex * 6) + columnIndex - 1
+//                        VStack(alignment: .center) {
+//                            //@AppStorage(shoesVM.shoes[index].favoriteKey) var shoeIsFavorite
+//
+//
+//
+//                            Model3D(named: favoriteShoes[index].model3DName, bundle: spatialShoesRCBundle) { model in
+//                                    model
+//                                        .resizable()
+//                                        .scaledToFit()
+//                                        .scaleEffect(0.5)
+//                                    // .background(Color.green)
+//                                        .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
+//
+//                                } placeholder: {
+//                                    ProgressView()
+//                                }
+//
+//                                .frame(width: 130, height: 130)
+//
+//                                Button {
+//                                    router.selectedTab = Tab.home
+//                                    shoesVM.selectedShoe = shoesVM.shoes[index]
+//                                } label: {
+//                                    Text(shoesVM.shoes[index].name)
+//                                }
+//
+//                        }
+//                    }
+//                }
+//            }
+//        }
