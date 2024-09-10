@@ -26,6 +26,9 @@ struct HomeView: View {
                         .tag(shoe)
                 }
             }
+            .onChange(of: shoeBindable.selectedShoe) { _,_ in
+                rotate = false
+            }
             .navigationTitle("Spatial Shoes")
             .navigationSplitViewColumnWidth(230)
             .toolbar {
