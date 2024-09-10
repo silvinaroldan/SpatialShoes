@@ -65,8 +65,8 @@ Tareas a realizar:
 orientación y tamaño en un modo de visión "libre".  
 
 - [ ] Solucionar que roto uno y rotan todos
-- [ ] Solucionar que se cambia una escala y se cambian todas  
-
+- [ ] Solucionar que se cambia una escala y se cambian todas
+- [ ] Agregar icono de la app
     
     
     
