@@ -73,39 +73,3 @@ struct Favorites: View {
 #Preview {
     Favorites()
 }
-
-//            ForEach(0..<nRows, id: \.self) { rowIndex in
-//                GridRow {
-//                    ForEach(0..<6, id: \.self) { columnIndex in
-//                        let index = (rowIndex * 6) + columnIndex - 1
-//                        VStack(alignment: .center) {
-//                            //@AppStorage(shoesVM.shoes[index].favoriteKey) var shoeIsFavorite
-//
-//
-//
-//                            Model3D(named: favoriteShoes[index].model3DName, bundle: spatialShoesRCBundle) { model in
-//                                    model
-//                                        .resizable()
-//                                        .scaledToFit()
-//                                        .scaleEffect(0.5)
-//                                    // .background(Color.green)
-//                                        .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
-//
-//                                } placeholder: {
-//                                    ProgressView()
-//                                }
-//
-//                                .frame(width: 130, height: 130)
-//
-//                                Button {
-//                                    router.selectedTab = Tab.home
-//                                    shoesVM.selectedShoe = shoesVM.shoes[index]
-//                                } label: {
-//                                    Text(shoesVM.shoes[index].name)
-//                                }
-//
-//                        }
-//                    }
-//                }
-//            }
-//        }
