@@ -67,7 +67,7 @@ orientación y tamaño en un modo de visión "libre".
 - [x] Solucionar que roto uno y rotan todos
 - [x] Solucionar que se cambia una escala y se cambian todas
 - [x] Agregar icono de la app
-- [ ] Si selecciono el boton de rotar que se deseleccione el de escalar y al reves
+- [x] Si selecciono el boton de rotar que se deseleccione el de escalar y al reves
 - [ ] poder rotar el zapato en cualquier sentido
 - [ ] El movimiento de magnificacion esta al reves
 - [ ] Pasar a swiftdata lo de seleccionar favoritos
