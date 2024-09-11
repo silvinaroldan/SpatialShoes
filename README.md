@@ -72,6 +72,7 @@ orientación y tamaño en un modo de visión "libre".
 
       
 - [ ] Pasar a swiftdata lo de seleccionar favoritos
+- [ ] Favoritos no se ve la primera vez que lo instalas
 - [ ] Que se vea todo lo mejor posible
 - [ ] Bajar la ultima beta y probarlo con esa version. Hacer una rama nueva 
 - [ ] Probar que pasa cuando ejecuto con vision os 2.0
