@@ -17,8 +17,8 @@ struct ShoeDetail: View {
     @Binding var touch: Bool
     @Binding var rotate: Bool
     
-    @State private var initialScale: Double = 0.0
-    @State private var scaleMagnified: Double = 0.0
+    @State private var initialScale: Double
+    @State private var scaleMagnified: Double
     
     @State private var rotationAngle: Double = 0.0
     @State private var currentRotation: CGFloat = 0.0

@@ -24,33 +24,38 @@ struct Favorites: View {
         }
 
         let columns = Array(repeating: GridItem(.flexible(), spacing: 10), count: 5)
-
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 10) {
-                ForEach(favoriteShoes, id: \.self) { item in
-
-                    VStack(alignment: .center) {
-                        Model3D(named: item.model3DName, bundle: spatialShoesRCBundle) { model in
-                            model
-                                .resizable()
-                                .scaledToFit()
-                                .scaleEffect(0.5)
+        
+        VStack {
+            Text("Favoritos")
+                .font(.title)
+                .padding()
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 10) {
+                    ForEach(favoriteShoes, id: \.self) { item in
+                        
+                        VStack(alignment: .center) {
+                            Model3D(named: item.model3DName, bundle: spatialShoesRCBundle) { model in
+                                model
+                                    .resizable()
+                                    .scaledToFit()
+                                    .scaleEffect(1.0)
                                 // .background(Color.green)
-                                .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
-
-                        } placeholder: {
-                            ProgressView()
+                                    .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
+                                
+                            } placeholder: {
+                                ProgressView()
+                            }
+                            .frame(width: 120, height: 120, alignment: .center)
+                            
+                            Button {
+                                router.selectedTab = Tab.home
+                                shoesVM.selectedShoe = item
+                            } label: {
+                                Text(item.name)
+                            }
                         }
-                        .frame(width: 130, height: 130, alignment: .center)
-
-                        Button {
-                            router.selectedTab = Tab.home
-                            shoesVM.selectedShoe = item
-                        } label: {
-                            Text(item.name)
-                        }
+                        .padding()
                     }
-                    .padding(20)
                 }
             }
         }
