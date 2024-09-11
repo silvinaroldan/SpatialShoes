@@ -37,6 +37,7 @@ struct HomeView: View {
                             Image(systemName: "rotate.3d")
                         }
                         .disabled(touch)
+
                         Toggle(isOn: $touch) {
                             Image(systemName: "hand.point.up.left")
                         }
