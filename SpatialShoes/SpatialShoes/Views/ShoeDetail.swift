@@ -69,8 +69,8 @@ struct ShoeDetail: View {
             .gesture(
                 MagnifyGesture()
                     .onChanged { value in
-                        let newScale = (1.0 - (value.magnification)) + initialScale
-                        if newScale > 0.4, newScale < 1.0 {
+                        let newScale = (value.magnification - 1.0) + initialScale
+                        if newScale > selectedShoe.scale, newScale < 1.0 {
                             scaleMagnified = newScale
                         }
                     }
