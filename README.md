@@ -69,11 +69,17 @@ orientación y tamaño en un modo de visión "libre".
 - [x] Agregar icono de la app
 - [x] Si selecciono el boton de rotar que se deseleccione el de escalar y al reves
 - [x] El movimiento de magnificacion esta al reves
+
+      
 - [ ] Pasar a swiftdata lo de seleccionar favoritos
+- [ ] Que se vea todo lo mejor posible 
 - [ ] Probar que pasa cuando ejecuto con vision os 2.0
 - [ ] poder rotar el zapato en cualquier sentido
     
-    
+    Plus        
+    - [ ] Ver el tema de los errores 
+    - [ ] Mostrar la estrella de favoritos adelante de cada nombre en la lista
+    - [ ] Tener la opcion de ordenar por favoritos 
     
     
 
@@ -100,7 +106,10 @@ nombre debajo y al pulsarlo se mostrará su ficha en más detalle.
 
 - [x] Agregar gesto ontap para mostrar la home view con la ficha de este shoe
 - [x] Mostrar el detalle del seleccionado
-- [x] Mostrar solo los favoritos  
+- [x] Mostrar solo los favoritos
+
+
+   
 
 
 
@@ -170,10 +179,7 @@ Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar 
     - [x] Cargar los modelos 3D
     - [x] Mostrar los modelos 3D
      
-    Plus        
-    - [ ] Error handler
-    - [ ] Ordenar por favoritos
-    - [ ] Mostrar la estrella de favoritos adelante de cada nombre en la lista
+   
   
     - [ ] **Atencion a esto!!** **en el json de los planetas se usa una escala "scale": [0.003506540175362943,0.003506540175362943, 0.003506540175362943], segun el planeta, probar lo mismo para tus modelos 3D**
 
