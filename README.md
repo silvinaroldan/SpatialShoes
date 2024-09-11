@@ -71,6 +71,7 @@ orientación y tamaño en un modo de visión "libre".
 - [ ] poder rotar el zapato en cualquier sentido
 - [ ] El movimiento de magnificacion esta al reves
 - [ ] Pasar a swiftdata lo de seleccionar favoritos
+- [ ] Probar que pasa cuando ejecuto con vision os 2.0
 
     
     
