@@ -11,18 +11,19 @@ import SwiftUI
 
 struct ShoeDetail: View {
     let selectedShoe: ShoeModel
+    
     @AppStorage("ShoeIsFavorite") var shoeIsFavorite = false
     
     @Binding var touch: Bool
     @Binding var rotate: Bool
     
+    @State private var initialScale: Double = 0.0
+    @State private var scaleMagnified: Double = 0.0
+    
     @State private var rotationAngle: Double = 0.0
     @State private var currentRotation: CGFloat = 0.0
     @State private var lastDragValue: CGFloat = 0.0
     @State private var velocity: CGFloat = 0.0
- 
-    @State var initialScale: CGFloat
-    @State private var scaleMagnified: Double
     
     init(selectedShoe: ShoeModel, touch: Binding<Bool>, rotate: Binding<Bool>) {
         self.selectedShoe = selectedShoe
@@ -44,7 +45,7 @@ struct ShoeDetail: View {
                     .rotation3DEffect(.degrees(rotationAngle),
                                       axis: (x: 0, y: -1, z: 0))
                     .rotation3DEffect(.degrees(Double(currentRotation)), axis: (x: 0, y: 1, z: 0))
-                    //.background(Color.green)
+                // .background(Color.green)
             } placeholder: {
                 ProgressView()
             }
@@ -81,6 +82,13 @@ struct ShoeDetail: View {
         .onAppear {
             doRotation()
         }
+        .onChange(of: selectedShoe) { _, _ in
+            scaleMagnified = selectedShoe.scale
+            initialScale = selectedShoe.scale
+            velocity = 0.0
+            rotationAngle = 0.0
+            currentRotation = 0.0
+        }
         .toolbar {
             Toggle("Favorite", systemImage: "star", isOn: $shoeIsFavorite)
         }
@@ -110,8 +118,8 @@ struct ShoeDetail: View {
 }
 
 #Preview(windowStyle: .automatic) {
-    @State var touch = false
-    @State var rotate = true
-    
-    ShoeDetail(selectedShoe: .test, touch: $touch, rotate: $rotate)
+//    @State var touch = false
+//    @State var rotate = true
+//
+//    ShoeDetail(selectedShoe: .test, touch: $touch, rotate: $rotate)
 }

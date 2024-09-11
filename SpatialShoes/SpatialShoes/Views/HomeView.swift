@@ -9,10 +9,9 @@ import RealityKit
 import SwiftUI
 
 struct HomeView: View {
-    
     @Environment(ShoesViewModel.self) private var shoesVM
     @Environment(\.openWindow) private var open
-    
+
     @State private var rotate = false
     @State private var touch = true
 
@@ -26,7 +25,7 @@ struct HomeView: View {
                         .tag(shoe)
                 }
             }
-            .onChange(of: shoeBindable.selectedShoe) { _,_ in
+            .onChange(of: shoeBindable.selectedShoe) { _, _ in
                 rotate = false
             }
             .navigationTitle("Spatial Shoes")
