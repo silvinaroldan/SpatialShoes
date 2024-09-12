@@ -1,3 +1,7 @@
+Xcode 16 Release Candidate
+visionOS 2.0
+
+
 SPATIAL SHOES
 
 Construye una app para la tienda Spatial Shoes, que mostrará los modelos
