@@ -27,4 +27,10 @@ final class ShoesViewModel {
             showAlert.toggle()
         }
     }
+    
+    func getFavoriteShoes() -> [ShoeModel] {
+        return shoes.filter { shoe in
+            UserDefaults.standard.bool(forKey: shoe.favoriteKey)
+        }
+    }
 }

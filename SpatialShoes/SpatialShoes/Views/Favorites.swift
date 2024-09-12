@@ -19,10 +19,6 @@ struct Favorites: View {
         @Bindable var router = router
         @Bindable var shoesVM = shoesVM
 
-        let favoriteShoes = shoesVM.shoes.filter { shoe in
-            UserDefaults.standard.bool(forKey: shoe.favoriteKey)
-        }
-
         let columns = Array(repeating: GridItem(.flexible(), spacing: 10), count: 5)
         
         VStack {
@@ -31,7 +27,7 @@ struct Favorites: View {
                 .padding()
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(favoriteShoes, id: \.self) { item in
+                    ForEach(shoesVM.getFavoriteShoes(), id: \.self) { item in
                         
                         VStack(alignment: .center) {
                             Model3D(named: item.model3DName, bundle: spatialShoesRCBundle) { model in

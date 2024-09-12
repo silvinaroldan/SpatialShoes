@@ -31,24 +31,26 @@ struct HomeView: View {
             .navigationTitle("Spatial Shoes")
             .navigationSplitViewColumnWidth(230)
             .toolbar {
-                ToolbarItem(placement: .bottomOrnament) {
-                    HStack(spacing: 30) {
-                        Toggle(isOn: $rotate) {
-                            Image(systemName: "rotate.3d")
-                        }
-                        .disabled(touch)
+                if shoesVM.selectedShoe != nil {
+                    ToolbarItem(placement: .bottomOrnament) {
+                        HStack(spacing: 30) {
+                            Toggle(isOn: $rotate) {
+                                Image(systemName: "rotate.3d")
+                            }
+                            .disabled(touch)
 
-                        Toggle(isOn: $touch) {
-                            Image(systemName: "hand.point.up.left")
+                            Toggle(isOn: $touch) {
+                                Image(systemName: "hand.point.up.left")
+                            }
+                            .disabled(rotate)
+                            Button {
+                                open(id: "shoe3D")
+                            } label: {
+                                Text("Ver en Detalle")
+                            }
                         }
-                        .disabled(rotate)
-                        Button {
-                            open(id: "shoe3D")
-                        } label: {
-                            Text("Ver en Detalle")
-                        }
+                        .toggleStyle(.button)
                     }
-                    .toggleStyle(.button)
                 }
             }
         } content: {
