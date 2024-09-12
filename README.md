@@ -1,3 +1,7 @@
+Xcode 16 Release Candidate
+visionOS 2.0
+
+
 SPATIAL SHOES
 
 Construye una app para la tienda Spatial Shoes, que mostrará los modelos
@@ -62,7 +66,28 @@ Tareas a realizar:
 
 - Los modelos podrán manipularse en 3D para poder verlos desde cualquier
 
-orientación y tamaño en un modo de visión "libre".
+orientación y tamaño en un modo de visión "libre".  
+
+- [x] Solucionar que roto uno y rotan todos
+- [x] Solucionar que se cambia una escala y se cambian todas
+- [x] Agregar icono de la app
+- [x] Si selecciono el boton de rotar que se deseleccione el de escalar y al reves
+- [x] El movimiento de magnificacion esta al reves
+
+      
+- [ ] Pasar a swiftdata lo de seleccionar favoritos
+- [ ] Favoritos no se ve la primera vez que lo instalas
+- [x] Que se vea todo lo mejor posible
+- [x] Bajar la ultima beta y probarlo con esa version. Hacer una rama nueva 
+- [x] Probar que pasa cuando ejecuto con vision os 2.0
+- [ ] poder rotar el zapato en cualquier sentido
+    
+    Plus        
+    - [ ] Ver el tema de los errores 
+    - [ ] Mostrar la estrella de favoritos adelante de cada nombre en la lista
+    - [ ] Tener la opcion de ordenar por favoritos 
+    
+    
 
 - También existirá un modo "expositor" que podrá elegirse en la pantalla
 
@@ -72,13 +97,27 @@ para que el modelo gire de manera continua y automática.
 
 de manera exclusiva y en más detalle.
 
+
+- [x] Hacer que se vea mas grande
+
+
+
 - Se podrá marcar como favorito cualquiera de los modelos.
 
 - Se generará un layout nuevo para estos favoritos en modo estantería
 
 donde podrán verse los modelos 3D rotando de forma continua con su
 
-nombre debajo y al pulsarlo se mostrará su ficha en más detalle.
+nombre debajo y al pulsarlo se mostrará su ficha en más detalle.  
+
+- [x] Agregar gesto ontap para mostrar la home view con la ficha de este shoe
+- [x] Mostrar el detalle del seleccionado
+- [x] Mostrar solo los favoritos
+
+
+   
+
+
 
 - Se creará un espacio inmersivo donde habrá un carrusel de zapatos.
 
@@ -98,6 +137,9 @@ a su posición en el espacio de muestra.
 
 
 -------
+Plus  
+- [x] Ver si dejar como esta el tema de ver el detalle de los favoritos en la home o si mostrar una ventana que se abra por debajo como los detalles que se muestran en la seria de bigbangtheory
+
 # SpatialShoes
 
 **SPATIAL SHOES**
@@ -143,10 +185,7 @@ Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar 
     - [x] Cargar los modelos 3D
     - [x] Mostrar los modelos 3D
      
-    Plus        
-    - [ ] Error handler
-    - [ ] Ordenar por favoritos
-    - [ ] Mostrar la estrella de favoritos adelante de cada nombre en la lista
+   
   
     - [ ] **Atencion a esto!!** **en el json de los planetas se usa una escala "scale": [0.003506540175362943,0.003506540175362943, 0.003506540175362943], segun el planeta, probar lo mismo para tus modelos 3D**
 
