@@ -1,5 +1,5 @@
-Xcode 16 Release Candidate
-visionOS 2.0
+**Xcode** : Xcode 16 Release Candidate  
+**visionOS Version** 2.0
 
 
 SPATIAL SHOES
