@@ -7,12 +7,16 @@
 
 import RealityKit
 import SpatialShoesRC
+import SwiftData
 import SwiftUI
 
 struct ShoeDetail: View {
     let selectedShoe: ShoeModel
     
-    @AppStorage("ShoeIsFavorite") var shoeIsFavorite = false
+    @State private var shoeIsFavorite = false
+    @Environment(\.modelContext) var modelContext
+    
+    @Query var favoritesShoes: [ShoeModelMetadata]
     
     @Binding var touch: Bool
     @Binding var rotate: Bool
@@ -31,7 +35,7 @@ struct ShoeDetail: View {
         _rotate = rotate
         _scaleMagnified = State(initialValue: selectedShoe.scale)
         _initialScale = State(initialValue: selectedShoe.scale)
-        _shoeIsFavorite = AppStorage(wrappedValue: shoeIsFavorite, selectedShoe.favoriteKey)
+       // _shoeIsFavorite = State(initialValue: isFavorite(id: selectedShoe.id))
     }
     
     var body: some View {
@@ -81,6 +85,7 @@ struct ShoeDetail: View {
         }
         .onAppear {
             doRotation()
+            shoeIsFavorite = isFavorite(id: selectedShoe.id)
         }
         .onChange(of: selectedShoe) { _, _ in
             scaleMagnified = selectedShoe.scale
@@ -88,6 +93,17 @@ struct ShoeDetail: View {
             velocity = 0.0
             rotationAngle = 0.0
             currentRotation = 0.0
+            shoeIsFavorite = isFavorite(id: selectedShoe.id)
+        }
+        .onChange(of: shoeIsFavorite) { _, newValue in
+            
+            if let index = favoritesShoes.firstIndex(where: { $0.id == selectedShoe.id }) {
+                let shoeMetadata = favoritesShoes[index]
+                shoeMetadata.isFavorite = newValue
+            } else {
+                let shoeMetadata = ShoeModelMetadata(id: selectedShoe.id, isFavorite: newValue)
+                modelContext.insert(shoeMetadata)
+            }
         }
         .toolbar {
             Toggle("Favorite", systemImage: "star", isOn: $shoeIsFavorite)
@@ -114,6 +130,11 @@ struct ShoeDetail: View {
             }
         }
         RunLoop.current.add(inertialTimer, forMode: .common)
+    }
+    
+    func isFavorite(id: Int) -> Bool {
+        let shoe = favoritesShoes.first(where: { $0.id == id })
+        return shoe?.isFavorite ?? false
     }
 }
 

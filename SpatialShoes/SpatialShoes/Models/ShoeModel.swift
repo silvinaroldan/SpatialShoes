@@ -6,8 +6,9 @@
 //
 
 import Foundation
-struct ShoeModel: Codable, Identifiable, Hashable {
+import SwiftData
 
+struct ShoeModel: Codable, Identifiable, Hashable {
     let id: Int
     let name: String
     let brand: String
@@ -26,8 +27,4 @@ struct ShoeModel: Codable, Identifiable, Hashable {
     let colors: [String]
     let warranty: Int
     let certifications: [String]
-    
-    var favoriteKey: String {
-        "Favorite-\(id)"
-    }
 }

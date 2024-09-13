@@ -7,12 +7,15 @@
 
 import RealityKit
 import SpatialShoesRC
+import SwiftData
 import SwiftUI
 
 struct Favorites: View {
-
     @Environment(ShoesViewModel.self) private var shoesVM
     @Environment(NavigationRouter.self) private var router
+    
+    @Query var favoritesShoes: [ShoeModelMetadata]
+    
     @State var rotationAngle: Double = 0.0
 
     var body: some View {
@@ -27,7 +30,7 @@ struct Favorites: View {
                 .padding()
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(shoesVM.getFavoriteShoes(), id: \.self) { item in
+                    ForEach(getFavoriteShoes(), id: \.self) { item in
                         
                         VStack(alignment: .center) {
                             Model3D(named: item.model3DName, bundle: spatialShoesRCBundle) { model in
@@ -35,7 +38,7 @@ struct Favorites: View {
                                     .resizable()
                                     .scaledToFit()
                                     .scaleEffect(1.0)
-                                // .background(Color.green)
+                                    // .background(Color.green)
                                     .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
                                 
                             } placeholder: {
@@ -67,6 +70,15 @@ struct Favorites: View {
             if rotationAngle >= 360 {
                 rotationAngle = 0
             }
+        }
+    }
+    
+    func getFavoriteShoes() -> [ShoeModel] {
+        let favotitesIds = favoritesShoes
+            .filter { $0.isFavorite }
+            .map { $0.id }
+        return shoesVM.shoes.filter {
+            favotitesIds.contains($0.id)
         }
     }
 }

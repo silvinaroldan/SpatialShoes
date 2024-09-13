@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct SpatialShoesApp: App {
@@ -18,6 +19,7 @@ struct SpatialShoesApp: App {
                 .environment(shoesVM)
                 .environment(navigationRouter)
         }
+        .modelContainer(for: [ShoeModelMetadata.self])
 
         WindowGroup(id: "shoe3D") {
             VolumetricShoe()

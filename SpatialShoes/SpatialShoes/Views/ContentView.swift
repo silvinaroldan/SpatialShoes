@@ -28,9 +28,9 @@ struct ContentView: View {
                 .tag(Tab.favorites)
         }
         .onChange(of: router.selectedTab) { _, newValue in
-            if newValue == .favorites && shoesVM.getFavoriteShoes().isEmpty {
-                router.selectedTab = .home
-            }
+//            if newValue == .favorites && shoesVM.getFavoriteShoes().isEmpty {
+//                router.selectedTab = .home
+//            }
         }
     }
 }

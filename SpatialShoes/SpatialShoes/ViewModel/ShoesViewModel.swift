@@ -5,10 +5,12 @@
 //  Created by Silvina Roldan on 07/08/2024.
 //
 
+import SwiftData
 import SwiftUI
 
 @Observable
 final class ShoesViewModel {
+    
     let interactor: DataInteractor
 
     var shoes: [ShoeModel]
@@ -25,12 +27,6 @@ final class ShoesViewModel {
             self.shoes = []
             self.errorMsg = "Error en la carga del JSON \(error.localizedDescription)"
             showAlert.toggle()
-        }
-    }
-    
-    func getFavoriteShoes() -> [ShoeModel] {
-        return shoes.filter { shoe in
-            UserDefaults.standard.bool(forKey: shoe.favoriteKey)
         }
     }
 }
