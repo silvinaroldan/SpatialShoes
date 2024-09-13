@@ -38,7 +38,6 @@ struct Favorites: View {
                                     .resizable()
                                     .scaledToFit()
                                     .scaleEffect(1.0)
-                                    // .background(Color.green)
                                     .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
                                 
                             } placeholder: {

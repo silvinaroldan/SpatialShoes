@@ -24,10 +24,11 @@ struct ShoeDetail: View {
     @State private var initialScale: Double
     @State private var scaleMagnified: Double
     
+    @State private var lastDragValue: CGSize = .zero
+    @State private var velocity: CGSize = .zero
     @State private var rotationAngle: Double = 0.0
-    @State private var currentRotation: CGFloat = 0.0
-    @State private var lastDragValue: CGFloat = 0.0
-    @State private var velocity: CGFloat = 0.0
+    @State private var currentRotationX: CGFloat = 0.0
+    @State private var currentRotationY: CGFloat = 0.0
     
     init(selectedShoe: ShoeModel, touch: Binding<Bool>, rotate: Binding<Bool>) {
         self.selectedShoe = selectedShoe
@@ -35,7 +36,6 @@ struct ShoeDetail: View {
         _rotate = rotate
         _scaleMagnified = State(initialValue: selectedShoe.scale)
         _initialScale = State(initialValue: selectedShoe.scale)
-       // _shoeIsFavorite = State(initialValue: isFavorite(id: selectedShoe.id))
     }
     
     var body: some View {
@@ -46,25 +46,31 @@ struct ShoeDetail: View {
                     .scaledToFit()
                     .scaleEffect(scaleMagnified)
                     .offset(x: selectedShoe.offsetx, y: selectedShoe.offsety)
-                    .rotation3DEffect(.degrees(rotationAngle),
-                                      axis: (x: 0, y: -1, z: 0))
-                    .rotation3DEffect(.degrees(Double(currentRotation)), axis: (x: 0, y: 1, z: 0))
-                // .background(Color.green)
+//                    .rotation3DEffect(.degrees(rotationAngle),
+//                                      axis: (x: 0, y: -1, z: 0))
+                    .rotation3DEffect(.degrees(currentRotationX), axis: (x: 0, y: 1, z: 0))
+                    .rotation3DEffect(.degrees(currentRotationY), axis: (x: -1, y: 0, z: 0))
             } placeholder: {
                 ProgressView()
             }
             .gesture(
                 DragGesture()
                     .onChanged { value in
-                        let delta = value.translation.width - lastDragValue
-                        velocity = delta / 10
-                        lastDragValue = value.translation.width
-                        if touch {
-                            currentRotation += velocity
-                        }
+                        let deltaX = value.translation.width - lastDragValue.width
+                        let deltaY = value.translation.height - lastDragValue.height
+                                       
+                        velocity = CGSize(
+                            width: deltaX / 10,
+                            height: deltaY / 10
+                        )
+                        lastDragValue = value.translation
+                        
+                        currentRotationY += velocity.height
+                        currentRotationX += velocity.width
+                        
                     }
                     .onEnded { _ in
-                        lastDragValue = 0.0
+                        lastDragValue = .zero
                         if touch {
                             startInertia()
                         }
@@ -90,9 +96,11 @@ struct ShoeDetail: View {
         .onChange(of: selectedShoe) { _, _ in
             scaleMagnified = selectedShoe.scale
             initialScale = selectedShoe.scale
-            velocity = 0.0
+            velocity = .zero
+            lastDragValue = .zero
             rotationAngle = 0.0
-            currentRotation = 0.0
+            currentRotationX = 0.0
+            currentRotationY = 0.0
             shoeIsFavorite = isFavorite(id: selectedShoe.id)
         }
         .onChange(of: shoeIsFavorite) { _, newValue in
@@ -122,11 +130,13 @@ struct ShoeDetail: View {
     
     func startInertia() {
         let inertialTimer = Timer.scheduledTimer(withTimeInterval: 0.016, repeats: true) { timer in
-            if abs(velocity) < 0.01 {
+            if abs(velocity.width) < 0.01 || abs(velocity.height) < 0.01 {
                 timer.invalidate()
             } else {
-                velocity *= 0.95
-                currentRotation += velocity
+                velocity.width *= 0.95
+                velocity.height *= 0.95
+                currentRotationX += velocity.width
+                currentRotationY += velocity.height
             }
         }
         RunLoop.current.add(inertialTimer, forMode: .common)
