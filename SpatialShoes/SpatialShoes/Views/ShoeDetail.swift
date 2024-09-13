@@ -63,11 +63,12 @@ struct ShoeDetail: View {
                             width: deltaX / 10,
                             height: deltaY / 10
                         )
-                        lastDragValue = value.translation
-                        
-                        currentRotationY += velocity.height
-                        currentRotationX += velocity.width
-                        
+                        if touch {
+                            lastDragValue = value.translation
+                            
+                            currentRotationY += velocity.height
+                            currentRotationX += velocity.width
+                        }
                     }
                     .onEnded { _ in
                         lastDragValue = .zero
