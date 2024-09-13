@@ -46,8 +46,8 @@ struct ShoeDetail: View {
                     .scaledToFit()
                     .scaleEffect(scaleMagnified)
                     .offset(x: selectedShoe.offsetx, y: selectedShoe.offsety)
-//                    .rotation3DEffect(.degrees(rotationAngle),
-//                                      axis: (x: 0, y: -1, z: 0))
+                    .rotation3DEffect(.degrees(rotationAngle),
+                                      axis: (x: 0, y: -1, z: 0))
                     .rotation3DEffect(.degrees(currentRotationX), axis: (x: 0, y: 1, z: 0))
                     .rotation3DEffect(.degrees(currentRotationY), axis: (x: -1, y: 0, z: 0))
             } placeholder: {
@@ -146,11 +146,4 @@ struct ShoeDetail: View {
         let shoe = favoritesShoes.first(where: { $0.id == id })
         return shoe?.isFavorite ?? false
     }
-}
-
-#Preview(windowStyle: .automatic) {
-//    @State var touch = false
-//    @State var rotate = true
-//
-//    ShoeDetail(selectedShoe: .test, touch: $touch, rotate: $rotate)
 }
