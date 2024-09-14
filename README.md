@@ -1,8 +1,8 @@
-## VISION DEVELOPER PROGRAM 2024 - SPATIAL SHOES
+## VISION DEVELOPER PROGRAM 2024 - Apple Coding Academy 
 ### SwiftUI + RealityKit
-### Práctica fin de formación
+### SPATIAL SHOES - Práctica fin de formación
 
-**Version de Xcode utilizada:** Xcode 16 Release Candidate  
+**Versión de Xcode utilizada:** Xcode 16 Release Candidate  
 **visionOS Version:** 2.0
 
 Construye una app para la tienda Spatial Shoes, que mostrará los modelos 3D junto a los datos de cada modelo de zapato. La forma de construir la UI es totalmente libre, pero debemos respetar la guía de diseño de interfaces nativas de Apple.
@@ -56,6 +56,4 @@ Tareas a realizar:
 
 - Se creará un espacio inmersivo donde habrá un carrusel de zapatos.
 
-Aparecerá el primero delante nuestro con unos botones de siguiente o anterior, que harán que se muestren los demás. Se puede crear haciendo que entren y salgan de pantalla por opacidad (por ejemplo) o incluso
-
-en una rueda donde veas los demás como se van aproximando. La forma de presentar este espacio es libre. Pero tienen que poder verse al máximo de detalle posible mientras lo tengamos "cogido" y al soltarlo volverá a su posición en el espacio de muestra.
+Aparecerá el primero delante nuestro con unos botones de siguiente o anterior, que harán que se muestren los demás. Se puede crear haciendo que entren y salgan de pantalla por opacidad (por ejemplo) o incluso en una rueda donde veas los demás como se van aproximando. La forma de presentar este espacio es libre. Pero tienen que poder verse al máximo de detalle posible mientras lo tengamos "cogido" y al soltarlo volverá a su posición en el espacio de muestra.
