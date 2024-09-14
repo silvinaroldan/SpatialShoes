@@ -30,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		3506277D2C8DB6B600A495CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		352523C82C963B640094CFB4 /* SpatialShoesRC  */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "SpatialShoesRC "; sourceTree = "<group>"; };
 		3568A58A2C63ACBB00965260 /* SpatialShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3568A5912C63ACBB00965260 /* SpatialShoesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialShoesApp.swift; sourceTree = "<group>"; };
 		3568A5932C63ACBB00965260 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		3568A5AB2C6414B600965260 /* JSONInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONInteractor.swift; sourceTree = "<group>"; };
 		3568A5AE2C64383500965260 /* ShoesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesViewModel.swift; sourceTree = "<group>"; };
 		356D5C522C8F21EA0019CA1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
-		356D5C542C8F8E880019CA1A /* SpatialShoesRC */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SpatialShoesRC; path = "../../../../Downloads/para imprimir viaje/SpatialShoesRC"; sourceTree = "<group>"; };
 		35749F552C9382F500D33773 /* ShoeModelMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeModelMetadata.swift; sourceTree = "<group>"; };
 		357990C42C650348007BD9B6 /* ShoeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDetail.swift; sourceTree = "<group>"; };
 		357990C62C650B2D007BD9B6 /* shoesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shoesTest.json; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		3568A58D2C63ACBB00965260 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				356D5C542C8F8E880019CA1A /* SpatialShoesRC */,
+				352523C82C963B640094CFB4 /* SpatialShoesRC  */,
 			);
 			path = Packages;
 			sourceTree = "<group>";

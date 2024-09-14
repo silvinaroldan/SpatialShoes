@@ -1,0 +1,66 @@
+{
+  "17E5CD66-6BF7-4D83-8D33-4AD249229A56" : {
+    "objectMetadataList" : [
+      [
+        "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
+        "Root",
+        "FemaleShoes",
+        "FemaleShoes_1"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
+        "Root",
+        "f",
+        "FemaleShoes_1"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
+        "Root",
+        "f",
+        "FemaleShoes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "17E5CD66-6BF7-4D83-8D33-4AD249229A56",
+        "Root",
+        "FemaleShoes",
+        "FemaleShoes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "F5A7C3E2-FA82-446F-BF41-044380AD2DD2" : {
+    "objectMetadataList" : [
+      [
+        "F5A7C3E2-FA82-446F-BF41-044380AD2DD2",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}

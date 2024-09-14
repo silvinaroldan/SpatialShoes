@@ -61,7 +61,7 @@ struct HomeView: View {
             if let selectedShoe = shoesVM.selectedShoe {
                 ShoeDetail(selectedShoe: selectedShoe, touch: $touch, rotate: $rotate)
             } else {
-                Text("Select a shoe from the list")
+                Text("Selecciona un zapato de la lista")
             }
         }
         .alert("App Error", isPresented:
