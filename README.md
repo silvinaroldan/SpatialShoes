@@ -1,6 +1,9 @@
-## VISION DEVELOPER PROGRAM 2024 - Apple Coding Academy 
-### SwiftUI + RealityKit
-### SPATIAL SHOES - Práctica fin de formación
+<h2 align="center"> VISION DEVELOPER PROGRAM 2024 - Apple Coding Academy  </h2>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4581be55-7212-48b2-9fae-b0f8742a1a5b" width="200"/>
+</p>
+
 
 **Versión de Xcode utilizada:** Xcode 16 Release Candidate  
 **visionOS Version:** 2.0
