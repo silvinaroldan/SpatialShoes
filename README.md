@@ -7,6 +7,33 @@
 
 **Versión de Xcode utilizada:** Xcode 16 Release Candidate  
 **visionOS Version:** 2.0
+<p align="center">
+<img src="https://github.com/user-attachments/assets/433fafba-038e-4933-a5bd-03e1a51bb287" width="600"/>
+</p>
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b45cc752-2aad-481b-9cec-2d2ab0a0d480" width="600"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9281cfe9-199e-472b-a375-5db73d77bffa" width="600"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d529fadf-f40e-4e7d-b8d2-e3f4e428a9c8" width="600"/>
+</p>
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6c7450e9-ec75-4d0e-8f6b-54aa1fe89a4e" width="600"/>
+</p>
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c992462e-6e05-4c55-86fa-3304ee01a978" width="600"/>
+</p>
+
 
 Construye una app para la tienda Spatial Shoes, que mostrará los modelos 3D junto a los datos de cada modelo de zapato. La forma de construir la UI es totalmente libre, pero debemos respetar la guía de diseño de interfaces nativas de Apple.
 
