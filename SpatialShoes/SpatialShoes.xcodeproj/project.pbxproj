@@ -67,7 +67,6 @@
 		350627812C8DB77700A495CF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				351C0B032C95E3900048DC9B /* Navigation */,
 				3506277D2C8DB6B600A495CF /* ContentView.swift */,
 				3568A5932C63ACBB00965260 /* HomeView.swift */,
 				35C817772C6FA347007AD378 /* ShoeContent.swift */,
@@ -109,6 +108,7 @@
 				3568A5912C63ACBB00965260 /* SpatialShoesApp.swift */,
 				3568A5A42C63BCC500965260 /* Models */,
 				350627812C8DB77700A495CF /* Views */,
+				351C0B032C95E3900048DC9B /* Navigation */,
 				35CC42532C86776600619DA9 /* RealityViews */,
 				3568A5AD2C6437EF00965260 /* ViewModel */,
 				3568A5A82C63D00C00965260 /* Interactor */,

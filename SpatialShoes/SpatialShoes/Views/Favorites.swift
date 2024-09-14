@@ -13,22 +13,26 @@ import SwiftUI
 struct Favorites: View {
     @Environment(ShoesViewModel.self) private var shoesVM
     @Environment(NavigationRouter.self) private var router
-    
-    @Query var favoritesShoes: [ShoeModelMetadata]
-    
+
+    @Query var favoritesShoesMetaData: [ShoeModelMetadata]
+
     @State var rotationAngle: Double = 0.0
+    
+    var favoritesShoes : [ShoeModel] {
+        getFavoriteShoes()
+    }
 
     var body: some View {
         @Bindable var router = router
         @Bindable var shoesVM = shoesVM
 
         let columns = Array(repeating: GridItem(.flexible(), spacing: 10), count: 5)
-        
+
         VStack {
             Text("Favoritos")
                 .font(.title)
                 .padding()
-            if getFavoriteShoes().isEmpty {
+            if favoritesShoes.isEmpty {
                 VStack(alignment: .center) {
                     Text("No hay favoritos seleccionados")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -36,7 +40,7 @@ struct Favorites: View {
             }
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(getFavoriteShoes(), id: \.self) { item in
+                    ForEach(favoritesShoes, id: \.self) { item in
                         
                         VStack(alignment: .center) {
                             Model3D(named: item.model3DName, bundle: spatialShoesRCBundle) { model in
@@ -77,9 +81,9 @@ struct Favorites: View {
             }
         }
     }
-    
+
     func getFavoriteShoes() -> [ShoeModel] {
-        let favotitesIds = favoritesShoes
+        let favotitesIds = favoritesShoesMetaData
             .filter { $0.isFavorite }
             .map { $0.id }
         return shoesVM.shoes.filter {

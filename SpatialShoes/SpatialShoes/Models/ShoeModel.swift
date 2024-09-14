@@ -8,15 +8,19 @@
 import Foundation
 import SwiftData
 
+struct Offset: Codable, Identifiable, Hashable {
+    var id: UUID { UUID() }
+    let x: Double
+    let y: Double
+}
+
 struct ShoeModel: Codable, Identifiable, Hashable {
+    
     let id: Int
     let name: String
     let brand: String
     let size: [Int]
     let price: Double
-    let offsetx: Double
-    let offsety: Double
-    let scale: Double
     let description: String
     let model3DName: String
     let type: String
@@ -27,4 +31,6 @@ struct ShoeModel: Codable, Identifiable, Hashable {
     let colors: [String]
     let warranty: Int
     let certifications: [String]
+    let offset: Offset
+    let scale: Double
 }

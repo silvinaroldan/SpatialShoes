@@ -28,7 +28,12 @@
         "certifications": [
             "Certificaci\u00f3n de Calidad",
             "Hecho a mano"
-        ]
+        ],
+        "offset": {
+            "x":-120.0,
+            "y":-60.0
+        },
+        "scale":0.6
     },
     {
         "id": 10234,
@@ -60,6 +65,11 @@
         "certifications": [
             "Certificaci\u00f3n de Sostenibilidad",
             "Hecho a mano"
-        ]
+        ],
+        "offset": {
+            "x":-100,
+            "y":-50
+        },
+        "scale":0.55
     }
 ]
