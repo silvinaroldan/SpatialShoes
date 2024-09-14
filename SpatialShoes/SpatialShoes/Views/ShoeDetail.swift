@@ -13,13 +13,13 @@ import SwiftUI
 struct ShoeDetail: View {
     let selectedShoe: ShoeModel
     
-    @State private var shoeIsFavorite = false
     @Environment(\.modelContext) var modelContext
-    
     @Query var favoritesShoes: [ShoeModelMetadata]
     
     @Binding var touch: Bool
     @Binding var rotate: Bool
+    
+    @State private var shoeIsFavorite = false
     
     @State private var initialScale: Double
     @State private var scaleMagnified: Double
@@ -95,24 +95,10 @@ struct ShoeDetail: View {
             shoeIsFavorite = isFavorite(id: selectedShoe.id)
         }
         .onChange(of: selectedShoe) { _, _ in
-            scaleMagnified = selectedShoe.scale
-            initialScale = selectedShoe.scale
-            velocity = .zero
-            lastDragValue = .zero
-            rotationAngle = 0.0
-            currentRotationX = 0.0
-            currentRotationY = 0.0
-            shoeIsFavorite = isFavorite(id: selectedShoe.id)
+            reset()
         }
         .onChange(of: shoeIsFavorite) { _, newValue in
-            
-            if let index = favoritesShoes.firstIndex(where: { $0.id == selectedShoe.id }) {
-                let shoeMetadata = favoritesShoes[index]
-                shoeMetadata.isFavorite = newValue
-            } else {
-                let shoeMetadata = ShoeModelMetadata(id: selectedShoe.id, isFavorite: newValue)
-                modelContext.insert(shoeMetadata)
-            }
+            save(isFavorite: newValue)
         }
         .toolbar {
             Toggle("Favorite", systemImage: "star", isOn: $shoeIsFavorite)
@@ -146,5 +132,26 @@ struct ShoeDetail: View {
     func isFavorite(id: Int) -> Bool {
         let shoe = favoritesShoes.first(where: { $0.id == id })
         return shoe?.isFavorite ?? false
+    }
+    
+    func reset() {
+        scaleMagnified = selectedShoe.scale
+        initialScale = selectedShoe.scale
+        velocity = .zero
+        lastDragValue = .zero
+        rotationAngle = 0.0
+        currentRotationX = 0.0
+        currentRotationY = 0.0
+        shoeIsFavorite = isFavorite(id: selectedShoe.id)
+    }
+    
+    func save(isFavorite: Bool) {
+        if let index = favoritesShoes.firstIndex(where: { $0.id == selectedShoe.id }) {
+            let shoeMetadata = favoritesShoes[index]
+            shoeMetadata.isFavorite = isFavorite
+        } else {
+            let shoeMetadata = ShoeModelMetadata(id: selectedShoe.id, isFavorite: isFavorite)
+            modelContext.insert(shoeMetadata)
+        }
     }
 }

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ShoeContent: View {
-    // TODO: - Add Localization
     let selectedShoe: ShoeModel
 
     var body: some View {

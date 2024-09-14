@@ -28,6 +28,12 @@ struct Favorites: View {
             Text("Favoritos")
                 .font(.title)
                 .padding()
+            if getFavoriteShoes().isEmpty {
+                VStack(alignment: .center) {
+                    Text("No hay favoritos seleccionados")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
+            }
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 10) {
                     ForEach(getFavoriteShoes(), id: \.self) { item in

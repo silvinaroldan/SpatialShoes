@@ -67,14 +67,22 @@
 		350627812C8DB77700A495CF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3568A5932C63ACBB00965260 /* HomeView.swift */,
+				351C0B032C95E3900048DC9B /* Navigation */,
 				3506277D2C8DB6B600A495CF /* ContentView.swift */,
-				356D5C522C8F21EA0019CA1A /* NavigationRouter.swift */,
+				3568A5932C63ACBB00965260 /* HomeView.swift */,
 				35C817772C6FA347007AD378 /* ShoeContent.swift */,
 				357990C42C650348007BD9B6 /* ShoeDetail.swift */,
 				35AEA8352C6FDF6000C40C3F /* Favorites.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		351C0B032C95E3900048DC9B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				356D5C522C8F21EA0019CA1A /* NavigationRouter.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		3568A5812C63ACBB00965260 = {
