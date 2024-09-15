@@ -1,5 +1,5 @@
 <h2 align="center"> VISION DEVELOPER PROGRAM 2024 - Apple Coding Academy  </h2>
-
+<h3 align="center"> Spatial Shoes App - Práctica fin de formación </h3>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4581be55-7212-48b2-9fae-b0f8742a1a5b" width="200"/>
 </p>
@@ -7,35 +7,44 @@
 
 **Versión de Xcode utilizada:** Xcode 16 Release Candidate  
 **visionOS Version:** 2.0
+
+Construye una app para la tienda Spatial Shoes, que mostrará los modelos 3D junto a los datos de cada modelo de zapato. La forma de construir la UI es totalmente libre, pero debemos respetar la guía de diseño de interfaces nativas de Apple.
+
+### Tareas a realizar:
+
+- Crear un catálogo que muestre toda la información y los modelos.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d529fadf-f40e-4e7d-b8d2-e3f4e428a9c8" width="600" /></div>
+</p>
+
+- Los modelos podrán manipularse en 3D para poder verlos desde cualquier orientación y tamaño en un modo de visión "libre".
 <p align="center">
 <img src="https://github.com/user-attachments/assets/433fafba-038e-4933-a5bd-03e1a51bb287" width="600"/>
 </p>
 
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/b45cc752-2aad-481b-9cec-2d2ab0a0d480" width="600"/>
-</p>
-
+- También existirá un modo "expositor" que podrá elegirse en la pantalla para que el modelo gire de manera continua y automática.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9281cfe9-199e-472b-a375-5db73d77bffa" width="600"/>
 </p>
 
+- Podrá pulsarse en un modelo 3D para verlo en una ventana volumétrica de manera exclusiva y en más detalle.
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d529fadf-f40e-4e7d-b8d2-e3f4e428a9c8" width="600"/>
+  <img src="https://github.com/user-attachments/assets/b45cc752-2aad-481b-9cec-2d2ab0a0d480" width="600"/>
 </p>
 
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/6c7450e9-ec75-4d0e-8f6b-54aa1fe89a4e" width="600"/>
-</p>
-
-
+- Se podrá marcar como favorito cualquiera de los modelos.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c992462e-6e05-4c55-86fa-3304ee01a978" width="600"/>
 </p>
 
+- Se generará un layout nuevo para estos favoritos en modo estantería donde podrán verse los modelos 3D rotando de forma continua con su nombre debajo y al pulsarlo se mostrará su ficha en más detalle.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c992462e-6e05-4c55-86fa-3304ee01a978" width="600"/>
+</p>
 
-Construye una app para la tienda Spatial Shoes, que mostrará los modelos 3D junto a los datos de cada modelo de zapato. La forma de construir la UI es totalmente libre, pero debemos respetar la guía de diseño de interfaces nativas de Apple.
+- Se creará un espacio inmersivo donde habrá un carrusel de zapatos. (opcional). Aparecerá el primero delante nuestro con unos botones de siguiente o anterior, que harán que se muestren los demás. Se puede crear haciendo que entren y salgan de pantalla por opacidad (por ejemplo) o incluso en una rueda donde veas los demás como se van aproximando. La forma de presentar este espacio es libre. Pero tienen que poder verse al máximo de detalle posible mientras lo tengamos "cogido" y al soltarlo volverá a su posición en el espacio de muestra.  
+
+
 
 Existe un archivo shoes.json que tiene toda la información necesaria.
 ```
@@ -66,24 +75,5 @@ En el campo model3DName está el modelo 3D USDZ que se encuentra en la carpeta 3
 
 Todas las tareas a realizar son obligatorias salvo la última del espacio inmersivo que es opcional para quien quiera ir un poco más allá.
 
-Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar la escala de cada modelo que será diferente para cada caso,
+Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar la escala de cada modelo que será diferente para cada caso, pero en la app deben verse todos del mismo tamaño.
 
-pero en la app deben verse todos del mismo tamaño.
-
-Tareas a realizar:
-
-- Crear un catálogo que muestre toda la información y los modelos.
-
-- Los modelos podrán manipularse en 3D para poder verlos desde cualquier orientación y tamaño en un modo de visión "libre".
-
-- También existirá un modo "expositor" que podrá elegirse en la pantalla para que el modelo gire de manera continua y automática.
-
-- Podrá pulsarse en un modelo 3D para verlo en una ventana volumétrica de manera exclusiva y en más detalle.
-
-- Se podrá marcar como favorito cualquiera de los modelos.
-
-- Se generará un layout nuevo para estos favoritos en modo estantería donde podrán verse los modelos 3D rotando de forma continua con su nombre debajo y al pulsarlo se mostrará su ficha en más detalle.
-
-- Se creará un espacio inmersivo donde habrá un carrusel de zapatos.
-
-Aparecerá el primero delante nuestro con unos botones de siguiente o anterior, que harán que se muestren los demás. Se puede crear haciendo que entren y salgan de pantalla por opacidad (por ejemplo) o incluso en una rueda donde veas los demás como se van aproximando. La forma de presentar este espacio es libre. Pero tienen que poder verse al máximo de detalle posible mientras lo tengamos "cogido" y al soltarlo volverá a su posición en el espacio de muestra.
