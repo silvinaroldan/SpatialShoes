@@ -19,7 +19,7 @@ extension HomeView {
 }
 
 extension ShoeModel {
-    static let test = ShoeModel(id: 10678,
+    static let test = ShoeModel(id: UUID(),
                                 name: "Elegant Heels",
                                 brand: "EleganceWalk",
                                 size: [35,
@@ -28,7 +28,7 @@ extension ShoeModel {
                                        38,
                                        39],
                                 price: 119.99,
-                                description: "Descubre la sofisticacif3n y el estilo con nuestros **Elegant Heels** de **EleganceWalk**. Disf1ados para las mujeres que buscan destacar en cualquier evento, estos zapatos de tacf3n ofrecen una combinacin perfecta de elegancia y comodidad. Ideales para ocasiones especiales y eventos formales.\n\n**Caracteredsticas Destacadas:**\n- **Material:** Cuero de alta calidad que proporciona un acabado lujoso y duradero",
+                                desc: "Descubre la sofisticacif3n y el estilo con nuestros **Elegant Heels** de **EleganceWalk**. Disf1ados para las mujeres que buscan destacar en cualquier evento, estos zapatos de tacf3n ofrecen una combinacin perfecta de elegancia y comodidad. Ideales para ocasiones especiales y eventos formales.\n\n**Caracteredsticas Destacadas:**\n- **Material:** Cuero de alta calidad que proporciona un acabado lujoso y duradero",
                                 model3DName: "SkateShoes",
                                 type: "Tacones",
                                 materials: [
@@ -48,5 +48,6 @@ extension ShoeModel {
                                     "ISO 9001",
                                 ],
                                 offset: Offset(x: -50, y: -50),
-                                scale: 0.8)
+                                scale: 0.8,
+                                isFavorite: false)
 }

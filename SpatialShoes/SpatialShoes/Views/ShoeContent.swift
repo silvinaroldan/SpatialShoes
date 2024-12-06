@@ -13,7 +13,7 @@ struct ShoeContent: View {
     var body: some View {
         Form {
             Section {
-                if let attributedString = try? AttributedString(markdown: selectedShoe.description, options: AttributedString.MarkdownParsingOptions(interpretedSyntax: .inlineOnlyPreservingWhitespace)) {
+                if let attributedString = try? AttributedString(markdown: selectedShoe.desc, options: AttributedString.MarkdownParsingOptions(interpretedSyntax: .inlineOnlyPreservingWhitespace)) {
                     Text(attributedString)
                 }
             } header: {

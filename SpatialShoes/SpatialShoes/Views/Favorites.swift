@@ -14,7 +14,7 @@ struct Favorites: View {
     @Environment(ShoesViewModel.self) private var shoesVM
     @Environment(NavigationRouter.self) private var router
 
-    @Query var favoritesShoesMetaData: [ShoeModelMetadata]
+    @Query var favoritesShoesMetaData: [ShoeModel]
 
     @State var rotationAngle: Double = 0.0
     

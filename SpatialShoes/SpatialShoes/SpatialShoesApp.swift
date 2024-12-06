@@ -19,7 +19,7 @@ struct SpatialShoesApp: App {
                 .environment(shoesVM)
                 .environment(navigationRouter)
         }
-        .modelContainer(for: [ShoeModelMetadata.self])
+        .modelContainer(for: [ShoeModel.self])
 
         WindowGroup(id: "shoe3D") {
             VolumetricShoe()

@@ -14,7 +14,7 @@ struct ShoeDetail: View {
     let selectedShoe: ShoeModel
     
     @Environment(\.modelContext) var modelContext
-    @Query var favoritesShoes: [ShoeModelMetadata]
+    @Query var favoritesShoes: [ShoeModel]
     
     @Binding var touch: Bool
     @Binding var rotate: Bool
@@ -91,7 +91,7 @@ struct ShoeDetail: View {
         }
         .onAppear {
             doRotation()
-            shoeIsFavorite = isFavorite(id: selectedShoe.id)
+          //  shoeIsFavorite = isFavorite(id: selectedShoe.id)
         }
         .onChange(of: selectedShoe) { _, _ in
             reset()
@@ -129,8 +129,9 @@ struct ShoeDetail: View {
     }
     
     func isFavorite(id: Int) -> Bool {
-        let shoe = favoritesShoes.first(where: { $0.id == id })
-        return shoe?.isFavorite ?? false
+//        let shoe = favoritesShoes.first(where: { $0.id == id })
+//        return shoe?.isFavorite ?? false
+        return false
     }
     
     func reset() {
@@ -141,16 +142,16 @@ struct ShoeDetail: View {
         rotationAngle = 0.0
         currentRotationX = 0.0
         currentRotationY = 0.0
-        shoeIsFavorite = isFavorite(id: selectedShoe.id)
+    //    shoeIsFavorite = isFavorite(id: selectedShoe.id)
     }
     
     func save(isFavorite: Bool) {
-        if let index = favoritesShoes.firstIndex(where: { $0.id == selectedShoe.id }) {
-            let shoeMetadata = favoritesShoes[index]
-            shoeMetadata.isFavorite = isFavorite
-        } else {
-            let shoeMetadata = ShoeModelMetadata(id: selectedShoe.id, isFavorite: isFavorite)
-            modelContext.insert(shoeMetadata)
-        }
+//        if let index = favoritesShoes.firstIndex(where: { $0.id == selectedShoe.id }) {
+//            let shoeMetadata = favoritesShoes[index]
+//            shoeMetadata.isFavorite = isFavorite
+//        } else {
+//            let shoeMetadata = ShoeModelMetadata(id: selectedShoe.id, isFavorite: isFavorite)
+//            modelContext.insert(shoeMetadata)
+//        }
     }
 }
