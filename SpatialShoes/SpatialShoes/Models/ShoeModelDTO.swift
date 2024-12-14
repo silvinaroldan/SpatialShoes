@@ -17,7 +17,7 @@ struct ShoeModelDTO: Codable {
     let desc: String
     let model3DName: String
     let type: String
-    let materials: [String]
+    let materials: [String] 
     let origin: String
     let gender: String
     let weight: Double

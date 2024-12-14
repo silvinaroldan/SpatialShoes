@@ -7,10 +7,12 @@
 
 import RealityKit
 import SwiftUI
+import SwiftData
 
 struct HomeView: View {
     @Environment(ShoesViewModel.self) private var shoesVM
     @Environment(\.openWindow) private var open
+    @Query var shoes: [ShoeModel]
 
     @State private var rotate = false
     @State private var touch = true
@@ -20,7 +22,7 @@ struct HomeView: View {
 
         NavigationSplitView {
             List(selection: $shoeBindable.selectedShoe) {
-                ForEach(shoesVM.shoes) { shoe in
+                ForEach(shoes) { shoe in
                     Text(shoe.name)
                         .tag(shoe)
                 }
@@ -63,11 +65,6 @@ struct HomeView: View {
             } else {
                 Text("Selecciona un zapato de la lista")
             }
-        }
-        .alert("App Error", isPresented:
-            $shoeBindable.showAlert) {}
-        message: {
-            Text(shoesVM.errorMsg)
         }
     }
 }

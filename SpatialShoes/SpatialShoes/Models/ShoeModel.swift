@@ -37,7 +37,7 @@ class ShoeModel: Identifiable, Hashable {
         self.isFavorite = isFavorite
     }
 
-    var id: UUID
+    @Attribute(.unique) var id: UUID
     var name: String
     var brand: String
     var size: [Int]

@@ -14,7 +14,7 @@ struct ShoeDetail: View {
     let selectedShoe: ShoeModel
     
     @Environment(\.modelContext) var modelContext
-    @Query var favoritesShoes: [ShoeModel]
+    @Query var shoes: [ShoeModel]
     
     @Binding var touch: Bool
     @Binding var rotate: Bool
@@ -91,13 +91,13 @@ struct ShoeDetail: View {
         }
         .onAppear {
             doRotation()
-          //  shoeIsFavorite = isFavorite(id: selectedShoe.id)
+            shoeIsFavorite = selectedShoe.isFavorite
         }
         .onChange(of: selectedShoe) { _, _ in
             reset()
         }
-        .onChange(of: shoeIsFavorite) { _, newValue in
-            save(isFavorite: newValue)
+        .onChange(of: shoeIsFavorite) { _, _ in
+            selectedShoe.isFavorite = shoeIsFavorite
         }
         .toolbar {
             Toggle("Favorite", systemImage: "star", isOn: $shoeIsFavorite)
@@ -128,12 +128,6 @@ struct ShoeDetail: View {
         RunLoop.current.add(inertialTimer, forMode: .common)
     }
     
-    func isFavorite(id: Int) -> Bool {
-//        let shoe = favoritesShoes.first(where: { $0.id == id })
-//        return shoe?.isFavorite ?? false
-        return false
-    }
-    
     func reset() {
         scaleMagnified = selectedShoe.scale
         initialScale = selectedShoe.scale
@@ -142,16 +136,7 @@ struct ShoeDetail: View {
         rotationAngle = 0.0
         currentRotationX = 0.0
         currentRotationY = 0.0
-    //    shoeIsFavorite = isFavorite(id: selectedShoe.id)
+        shoeIsFavorite = selectedShoe.isFavorite
     }
-    
-    func save(isFavorite: Bool) {
-//        if let index = favoritesShoes.firstIndex(where: { $0.id == selectedShoe.id }) {
-//            let shoeMetadata = favoritesShoes[index]
-//            shoeMetadata.isFavorite = isFavorite
-//        } else {
-//            let shoeMetadata = ShoeModelMetadata(id: selectedShoe.id, isFavorite: isFavorite)
-//            modelContext.insert(shoeMetadata)
-//        }
-    }
+
 }

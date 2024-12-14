@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol JSONInteractor {
+protocol JSONInteractor: Sendable {
     func loadJSON<JSON>(url: URL, type: JSON.Type) throws -> JSON where JSON: Codable
 }
 

@@ -19,6 +19,7 @@
 		3568A5AF2C64383500965260 /* ShoesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568A5AE2C64383500965260 /* ShoesViewModel.swift */; };
 		356D5C532C8F21EA0019CA1A /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D5C522C8F21EA0019CA1A /* NavigationRouter.swift */; };
 		356D5C562C8F8E930019CA1A /* SpatialShoesRC in Frameworks */ = {isa = PBXBuildFile; productRef = 356D5C552C8F8E930019CA1A /* SpatialShoesRC */; };
+		356F9B072D0E25DF006C2B64 /* APIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F9B062D0E25DF006C2B64 /* APIActor.swift */; };
 		357990C52C650348007BD9B6 /* ShoeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357990C42C650348007BD9B6 /* ShoeDetail.swift */; };
 		357990C72C650B2D007BD9B6 /* shoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 357990C62C650B2D007BD9B6 /* shoesTest.json */; };
 		357990C92C650BA2007BD9B6 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357990C82C650BA2007BD9B6 /* DataTest.swift */; };
@@ -43,6 +44,7 @@
 		3568A5AB2C6414B600965260 /* JSONInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONInteractor.swift; sourceTree = "<group>"; };
 		3568A5AE2C64383500965260 /* ShoesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesViewModel.swift; sourceTree = "<group>"; };
 		356D5C522C8F21EA0019CA1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		356F9B062D0E25DF006C2B64 /* APIActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIActor.swift; sourceTree = "<group>"; };
 		357990C42C650348007BD9B6 /* ShoeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDetail.swift; sourceTree = "<group>"; };
 		357990C62C650B2D007BD9B6 /* shoesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shoesTest.json; sourceTree = "<group>"; };
 		357990C82C650BA2007BD9B6 /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		3568A5A82C63D00C00965260 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				356F9B062D0E25DF006C2B64 /* APIActor.swift */,
 				3568A5A92C63D01D00965260 /* DataInteractor.swift */,
 				3568A5AB2C6414B600965260 /* JSONInteractor.swift */,
 			);
@@ -273,6 +276,7 @@
 				3568A5AA2C63D01D00965260 /* DataInteractor.swift in Sources */,
 				3568A5AC2C6414B600965260 /* JSONInteractor.swift in Sources */,
 				357D02062D03343D005CC86D /* ShoeModelDTO.swift in Sources */,
+				356F9B072D0E25DF006C2B64 /* APIActor.swift in Sources */,
 				3568A5A32C63B39100965260 /* ShoeModel.swift in Sources */,
 				357990C92C650BA2007BD9B6 /* DataTest.swift in Sources */,
 				3568A5942C63ACBB00965260 /* HomeView.swift in Sources */,

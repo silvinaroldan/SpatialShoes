@@ -9,7 +9,7 @@ import Foundation
 
 protocol DataInteractor: JSONInteractor {
     var url: URL { get }
-    func getShoes() throws -> [ShoeModel]
+    func  getShoes() throws -> [ShoeModel]
 }
 
 extension DataInteractor {

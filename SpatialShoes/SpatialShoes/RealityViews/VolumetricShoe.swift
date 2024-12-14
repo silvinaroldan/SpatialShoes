@@ -29,5 +29,5 @@ struct VolumetricShoe: View {
 
 #Preview(windowStyle: .volumetric, traits: .fixedLayout(width: 1.0, height: 1.0, depth: 1.0)) {
     VolumetricShoe()
-        .environment(ShoesViewModel(interactor: DataTest()))
+        //.environment(ShoesViewModel(interactor: DataTest()))
 }

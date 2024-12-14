@@ -14,7 +14,7 @@ struct DataTest: DataInteractor {
 extension HomeView {
     static var preview: some View {
         HomeView()
-            .environment(ShoesViewModel(interactor: DataTest()))
+          //  .environment(ShoesViewModel(interactor: DataTest()))
     }
 }
 

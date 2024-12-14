@@ -14,13 +14,11 @@ struct Favorites: View {
     @Environment(ShoesViewModel.self) private var shoesVM
     @Environment(NavigationRouter.self) private var router
 
-    @Query var favoritesShoesMetaData: [ShoeModel]
+    @Query(filter: #Predicate<ShoeModel> { shoe in
+        shoe.isFavorite == true
+    }) var favoritesShoes: [ShoeModel]
 
     @State var rotationAngle: Double = 0.0
-    
-    var favoritesShoes : [ShoeModel] {
-        getFavoriteShoes()
-    }
 
     var body: some View {
         @Bindable var router = router
@@ -41,20 +39,23 @@ struct Favorites: View {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 10) {
                     ForEach(favoritesShoes, id: \.self) { item in
-                        
+
                         VStack(alignment: .center) {
-                            Model3D(named: item.model3DName, bundle: spatialShoesRCBundle) { model in
-                                model
+                            Model3D(named: item.model3DName, bundle: spatialShoesRCBundle) { phase in
+                                if let model = phase.model {
+                                    model
                                     .resizable()
                                     .scaledToFit()
                                     .scaleEffect(1.0)
-                                    .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
-                                
-                            } placeholder: {
-                                ProgressView()
+                                   // .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
+                                } else if phase.error != nil {
+                                    //print("Error en la carga")
+                                } else {
+                                    ProgressView()
+                                }
                             }
                             .frame(width: 120, height: 120, alignment: .center)
-                            
+
                             Button {
                                 router.selectedTab = Tab.home
                                 shoesVM.selectedShoe = item
@@ -79,15 +80,6 @@ struct Favorites: View {
             if rotationAngle >= 360 {
                 rotationAngle = 0
             }
-        }
-    }
-
-    func getFavoriteShoes() -> [ShoeModel] {
-        let favotitesIds = favoritesShoesMetaData
-            .filter { $0.isFavorite }
-            .map { $0.id }
-        return shoesVM.shoes.filter {
-            favotitesIds.contains($0.id)
         }
     }
 }
