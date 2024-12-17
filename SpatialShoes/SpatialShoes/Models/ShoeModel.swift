@@ -2,61 +2,39 @@
 //  ShoeModel.swift
 //  SpatialShoes
 //
-//  Created by Silvina Roldan on 07/08/2024.
+//  Created by Silvina Roldan on 16/12/2024.
 //
 
-import SwiftData
-import SwiftUI
+import Foundation
+
+struct ShoeModel: Codable {
+    
+    let id: Int
+    let name: String
+    let brand: String
+    let size: [Int]
+    let price: Double
+    let desc: String
+    let model3DName: String
+    let type: String
+    let materials: [String]
+    let origin: String
+    let gender: String
+    let weight: Double
+    let colors: [String]
+    let warranty: Int
+    let certifications: [String]
+    let offset: Offset
+    let scale: Double
+    
+    enum CodingKeys: String, CodingKey {
+        case id, name, brand, size, price, model3DName, type, materials, origin, gender, weight, colors, warranty, certifications, offset, scale
+        case desc = "description"
+    }
+}
 
 struct Offset: Codable {
     var id: UUID { UUID() }
     let x: Double
     let y: Double
-}
-
-@Model
-class ShoeModel: Identifiable, Hashable {
-    init(id: UUID, name: String, brand: String, size: [Int], price: Double, desc: String, model3DName: String, type: String, materials: [String], origin: String, gender: String, weight: Double, colors: [String], warranty: Int, certifications: [String], offset: Offset, scale: Double, isFavorite: Bool) {
-        self.id = id
-        self.name = name
-        self.brand = brand
-        self.size = size
-        self.price = price
-        self.desc = desc
-        self.model3DName = model3DName
-        self.type = type
-        self.materials = materials
-        self.origin = origin
-        self.gender = gender
-        self.weight = weight
-        self.colors = colors
-        self.warranty = warranty
-        self.certifications = certifications
-        self.offset = offset
-        self.scale = scale
-        self.isFavorite = isFavorite
-    }
-
-    @Attribute(.unique) var id: UUID
-    var name: String
-    var brand: String
-    var size: [Int]
-    var price: Double
-    var desc: String
-    var model3DName: String
-    var type: String
-    var materials: [String]
-    var origin: String
-    var gender: String
-    var weight: Double
-    var colors: [String]
-    var warranty: Int
-    var certifications: [String]
-    var offset: Offset
-    var scale: Double
-    var isFavorite: Bool
-}
-
-extension ShoeModelDTO {
-    var toPresentation: ShoeModel { ShoeModel(id: UUID(), name: name, brand: brand, size: size, price: price, desc: desc, model3DName: model3DName, type: type, materials: materials, origin: origin, gender: gender, weight: weight, colors: colors, warranty: warranty, certifications: certifications, offset: offset, scale: scale, isFavorite: false) }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ShoeContent: View {
-    let selectedShoe: ShoeModel
+    let selectedShoe: ShoeDataModel
 
     var body: some View {
         Form {
@@ -39,5 +39,5 @@ struct ShoeContent: View {
 }
 
 #Preview {
-    ShoeContent(selectedShoe: .test)
+    //ShoeContent(selectedShoe: .test)
 }

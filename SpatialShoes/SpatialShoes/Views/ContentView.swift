@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(NavigationRouter.self) private var router
-    @Environment(ShoesViewModel.self) private var shoesVM
+    @Environment(ShoesVM.self) private var shoesVM
 
     var body: some View {
         @Bindable var router = router

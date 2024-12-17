@@ -10,9 +10,10 @@ import SwiftUI
 import SwiftData
 
 struct HomeView: View {
-    @Environment(ShoesViewModel.self) private var shoesVM
+    @Environment(ShoesVM.self) private var shoesVM
     @Environment(\.openWindow) private var open
-    @Query var shoes: [ShoeModel]
+    
+    @Query(sort: [SortDescriptor<ShoeDataModel>(\.id)]) private var shoes: [ShoeDataModel]
 
     @State private var rotate = false
     @State private var touch = true
@@ -30,31 +31,13 @@ struct HomeView: View {
             .onChange(of: shoeBindable.selectedShoe) { _, _ in
                 rotate = false
             }
+//            .onDelete { indexes in
+//                shoesVM.deleteShoe(indexes: indexes,
+//                                  shoes: shoes,
+//                                  context: context)
+//            }
             .navigationTitle("Spatial Shoes")
             .navigationSplitViewColumnWidth(230)
-            .toolbar {
-                if shoesVM.selectedShoe != nil {
-                    ToolbarItem(placement: .bottomOrnament) {
-                        HStack(spacing: 30) {
-                            Toggle(isOn: $rotate) {
-                                Image(systemName: "rotate.3d")
-                            }
-                            .disabled(touch)
-
-                            Toggle(isOn: $touch) {
-                                Image(systemName: "hand.point.up.left")
-                            }
-                            .disabled(rotate)
-                            Button {
-                                open(id: "shoe3D")
-                            } label: {
-                                Text("Ver en Detalle")
-                            }
-                        }
-                        .toggleStyle(.button)
-                    }
-                }
-            }
         } content: {
             if let selectedShoe = shoesVM.selectedShoe {
                 ShoeContent(selectedShoe: selectedShoe)
@@ -66,6 +49,30 @@ struct HomeView: View {
                 Text("Selecciona un zapato de la lista")
             }
         }
+        .toolbar {
+            if shoesVM.selectedShoe != nil {
+                ToolbarItem(placement: .bottomOrnament) {
+                    HStack(spacing: 30) {
+                        Toggle(isOn: $rotate) {
+                            Image(systemName: "rotate.3d")
+                        }
+                        .disabled(touch)
+                        
+                        Toggle(isOn: $touch) {
+                            Image(systemName: "hand.point.up.left")
+                        }
+                        .disabled(rotate)
+                        Button {
+                            open(id: "shoe3D")
+                        } label: {
+                            Text("Ver en Detalle")
+                        }
+                    }
+                    .toggleStyle(.button)
+                }
+            }
+        }
+
     }
 }
 

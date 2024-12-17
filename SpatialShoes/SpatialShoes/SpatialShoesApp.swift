@@ -5,12 +5,12 @@
 //  Created by Silvina Roldan on 07/08/2024.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct SpatialShoesApp: App {
-    @State var shoesVM = ShoesViewModel()
+    @State var shoesVM = ShoesVM()
     @State var navigationRouter = NavigationRouter()
 
     var body: some Scene {
@@ -19,33 +19,11 @@ struct SpatialShoesApp: App {
                 .environment(shoesVM)
                 .environment(navigationRouter)
         }
-        .modelContainer(for: ShoeModel.self) { result in
-            do {
-                let container = try result.get()
-                let interactor: DataInteractor = Interactor()
-                
-                let descriptor = FetchDescriptor<ShoeModel>()
-                let existingShoes = try container.mainContext.fetchCount(descriptor)
-                guard existingShoes == 0 else { return }
-                
+        .modelContainer(for: ShoeDataModel.self) { result in
+            guard case .success(let container) = result else { return }
 
-                do {
-                    let shoes: [ShoeModel] = try interactor.getShoes()
-                    for shoe  in shoes {
-                        container.mainContext.insert(shoe)
-                    }
-                } catch {
-                    
-                    print("Error en la carga del JSON \(error.localizedDescription)")
-                    
-                }
-
-                // Add all our data to the context.
-            } catch {
-                print("Failed to pre-seed database.")
-            }
+            Task { await loadData(container) }
         }
-
         WindowGroup(id: "shoe3D") {
             VolumetricShoe()
                 .environment(shoesVM)
@@ -54,5 +32,15 @@ struct SpatialShoesApp: App {
         .windowStyle(.volumetric)
         .defaultSize(width: 0.65, height: 0.65, depth: 0.65, in: .meters)
     }
-}
 
+    func loadData(_ container: ModelContainer) async {
+        do {
+            let manager = BackgroundDataManager(modelContainer: container)
+            let dataConnection = Network()
+            let shoes = try await dataConnection.getShoes()
+            try await manager.processShoeData(shoes)
+        } catch {
+            print("Error loading shoes \(error).")
+        }
+    }
+}

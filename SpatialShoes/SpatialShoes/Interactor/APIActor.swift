@@ -2,13 +2,14 @@
 //  APIActor.swift
 //  EmpleadosSwiftTesting
 //
-//  Created by Julio César Fernández Muñoz on 13/12/24.
+//  Created by Silvina Roldan on 14/12/24.
 //
 
 import Foundation
 
+
 @globalActor
-actor APIActor: DataInteractor {
+actor APIActor: Interactor {
     static let shared = APIActor()
     
     let session: URLSession

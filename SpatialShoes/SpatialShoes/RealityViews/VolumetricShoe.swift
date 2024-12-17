@@ -10,7 +10,7 @@ import RealityKit
 import SpatialShoesRC
 
 struct VolumetricShoe: View {
-    @Environment(ShoesViewModel.self) private var shoesVM
+    @Environment(ShoesVM.self) private var shoesVM
 
     var body: some View {
         RealityView { content in

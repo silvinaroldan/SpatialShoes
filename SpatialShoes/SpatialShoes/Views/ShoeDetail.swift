@@ -11,10 +11,10 @@ import SwiftData
 import SwiftUI
 
 struct ShoeDetail: View {
-    let selectedShoe: ShoeModel
+    let selectedShoe: ShoeDataModel
     
     @Environment(\.modelContext) var modelContext
-    @Query var shoes: [ShoeModel]
+    @Query var shoes: [ShoeDataModel]
     
     @Binding var touch: Bool
     @Binding var rotate: Bool
@@ -30,7 +30,7 @@ struct ShoeDetail: View {
     @State private var currentRotationX: CGFloat = 0.0
     @State private var currentRotationY: CGFloat = 0.0
     
-    init(selectedShoe: ShoeModel, touch: Binding<Bool>, rotate: Binding<Bool>) {
+    init(selectedShoe: ShoeDataModel, touch: Binding<Bool>, rotate: Binding<Bool>) {
         self.selectedShoe = selectedShoe
         _touch = touch
         _rotate = rotate
