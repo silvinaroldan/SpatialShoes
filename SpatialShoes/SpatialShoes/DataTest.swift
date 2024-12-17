@@ -7,20 +7,7 @@
 
 import SwiftUI
 
-struct DataTest: Interactor {
-    var session: URLSession
-    
-    var url: URL { Bundle.main.url(forResource: "shoesTest", withExtension: "json")! }
-}
-
-extension HomeView {
-    static var preview: some View {
-        HomeView()
-          //  .environment(ShoesViewModel(interactor: DataTest()))
-    }
-}
-
-extension ShoeModel {
+extension ShoeDataModel {
     static let test = ShoeDataModel(id: 12345,
                                 name: "Elegant Heels",
                                 brand: "EleganceWalk",

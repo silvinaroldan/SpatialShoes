@@ -39,5 +39,5 @@ struct ShoeContent: View {
 }
 
 #Preview {
-    //ShoeContent(selectedShoe: .test)
+    ShoeContent(selectedShoe: .test)
 }

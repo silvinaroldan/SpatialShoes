@@ -51,7 +51,3 @@ final class ShoeDataModel {
         self.isFavorite = false
     }
 }
-
-//extension ShoeModelDTO {
-//    var toPresentation: ShoeDataModel { ShoeDataModel(id: id, name: name, brand: brand, size: size, price: price, desc: desc, model3DName: model3DName, type: type, materials: materials, origin: origin, gender: gender, weight: weight, colors: colors, warranty: warranty, certifications: certifications, offset: offset, scale: scale, isFavorite: false) }
-//}

@@ -10,7 +10,10 @@ import SwiftData
 @Observable @MainActor
 final class ShoesVM {
     var selectedShoe: ShoeDataModel?
-    
+}
+
+
+
 //    In case we need to add / remove or get a shoe from the database this is the
 //    code to do it
 //
@@ -31,4 +34,3 @@ final class ShoesVM {
 //        context.insert(shoe)
 //        try context.save()
 //    }
-}

@@ -19,7 +19,6 @@
 		356D5C532C8F21EA0019CA1A /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D5C522C8F21EA0019CA1A /* NavigationRouter.swift */; };
 		356D5C562C8F8E930019CA1A /* SpatialShoesRC in Frameworks */ = {isa = PBXBuildFile; productRef = 356D5C552C8F8E930019CA1A /* SpatialShoesRC */; };
 		356F9B072D0E25DF006C2B64 /* APIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F9B062D0E25DF006C2B64 /* APIActor.swift */; };
-		356F9B092D0E2955006C2B64 /* shoesPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 356F9B082D0E2955006C2B64 /* shoesPreview.json */; };
 		356F9B0C2D0E2F21006C2B64 /* ModelActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F9B0B2D0E2F21006C2B64 /* ModelActor.swift */; };
 		357990C52C650348007BD9B6 /* ShoeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357990C42C650348007BD9B6 /* ShoeDetail.swift */; };
 		357990C72C650B2D007BD9B6 /* shoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 357990C62C650B2D007BD9B6 /* shoesTest.json */; };
@@ -48,7 +47,6 @@
 		3568A5AE2C64383500965260 /* ShoesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesVM.swift; sourceTree = "<group>"; };
 		356D5C522C8F21EA0019CA1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		356F9B062D0E25DF006C2B64 /* APIActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIActor.swift; sourceTree = "<group>"; };
-		356F9B082D0E2955006C2B64 /* shoesPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = shoesPreview.json; sourceTree = "<group>"; };
 		356F9B0B2D0E2F21006C2B64 /* ModelActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelActor.swift; sourceTree = "<group>"; };
 		357990C42C650348007BD9B6 /* ShoeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDetail.swift; sourceTree = "<group>"; };
 		357990C62C650B2D007BD9B6 /* shoesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shoesTest.json; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 		3568A5972C63ACBC00965260 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				356F9B082D0E2955006C2B64 /* shoesPreview.json */,
 				3568A5982C63ACBC00965260 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -282,7 +279,6 @@
 				357990C72C650B2D007BD9B6 /* shoesTest.json in Resources */,
 				3568A5992C63ACBC00965260 /* Preview Assets.xcassets in Resources */,
 				3568A5A12C63B30400965260 /* shoes.json in Resources */,
-				356F9B092D0E2955006C2B64 /* shoesPreview.json in Resources */,
 				3568A5962C63ACBC00965260 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +457,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -488,6 +485,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};

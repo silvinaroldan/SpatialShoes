@@ -18,7 +18,6 @@ struct Favorites: View {
         shoe.isFavorite == true
     }) var favoritesShoes: [ShoeDataModel]
     
-    //var favoritesShoes: [ShoeDataModel] = []
     @State var rotationAngle: Double = 0.0
 
     var body: some View {
@@ -87,5 +86,5 @@ struct Favorites: View {
 }
 
 #Preview {
-    Favorites()
+    
 }

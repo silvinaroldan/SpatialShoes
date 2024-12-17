@@ -140,3 +140,7 @@ struct ShoeDetail: View {
     }
 
 }
+
+#Preview {
+    ShoeDetail(selectedShoe: .test, touch: .constant(true), rotate: .constant(true))
+}

@@ -6,13 +6,13 @@
 //
 
 import RealityKit
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct HomeView: View {
     @Environment(ShoesVM.self) private var shoesVM
     @Environment(\.openWindow) private var open
-    
+
     @Query(sort: [SortDescriptor<ShoeDataModel>(\.id)]) private var shoes: [ShoeDataModel]
 
     @State private var rotate = false
@@ -31,11 +31,7 @@ struct HomeView: View {
             .onChange(of: shoeBindable.selectedShoe) { _, _ in
                 rotate = false
             }
-//            .onDelete { indexes in
-//                shoesVM.deleteShoe(indexes: indexes,
-//                                  shoes: shoes,
-//                                  context: context)
-//            }
+
             .navigationTitle("Spatial Shoes")
             .navigationSplitViewColumnWidth(230)
         } content: {
@@ -57,7 +53,7 @@ struct HomeView: View {
                             Image(systemName: "rotate.3d")
                         }
                         .disabled(touch)
-                        
+
                         Toggle(isOn: $touch) {
                             Image(systemName: "hand.point.up.left")
                         }
@@ -72,10 +68,5 @@ struct HomeView: View {
                 }
             }
         }
-
     }
-}
-
-#Preview(windowStyle: .automatic) {
-    HomeView()
 }
