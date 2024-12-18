@@ -36,11 +36,11 @@ struct HomeView: View {
             .navigationSplitViewColumnWidth(230)
         } content: {
             if let selectedShoe = shoesVM.selectedShoe {
-                ShoeContent(selectedShoe: selectedShoe)
+                ShoeContentView(selectedShoe: selectedShoe)
             }
         } detail: {
             if let selectedShoe = shoesVM.selectedShoe {
-                ShoeDetail(selectedShoe: selectedShoe, touch: $touch, rotate: $rotate)
+                ShoeDetailView(selectedShoe: selectedShoe, touch: $touch, rotate: $rotate)
             } else {
                 Text("Selecciona un zapato de la lista")
             }

@@ -9,7 +9,7 @@ import SwiftData
 import SwiftUI
 
 @Model
-final class ShoeDataModel {
+final class ShoeDataModel: Identifiable {
 
     @Attribute(.unique) var id: Int
     var name: String

@@ -1,5 +1,5 @@
 //
-//  Favorites.swift
+//  FavoritesView.swift
 //  SpatialShoes
 //
 //  Created by Silvina Roldan on 16/08/2024.
@@ -10,7 +10,7 @@ import SpatialShoesRC
 import SwiftData
 import SwiftUI
 
-struct Favorites: View {
+struct FavoritesView: View {
     @Environment(ShoesVM.self) private var shoesVM
     @Environment(NavigationRouter.self) private var router
 
@@ -24,7 +24,7 @@ struct Favorites: View {
         @Bindable var router = router
         @Bindable var shoesVM = shoesVM
 
-        //let columns = Array(repeating: GridItem(.flexible(), spacing: 10), count: 5)
+        let columns = Array(repeating: GridItem(.flexible(), spacing: 10), count: 5)
 
         VStack {
             Text("Favoritos")
@@ -36,9 +36,9 @@ struct Favorites: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
-//            ScrollView {
-//                LazyVGrid(columns: columns, spacing: 10) {
-                List {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 10) {
+           
                     ForEach(favoritesShoes, id: \.self) { item in
 
                         VStack(alignment: .center) {
@@ -64,12 +64,11 @@ struct Favorites: View {
                                 Text(item.name)
                             }
                         }
-                        .padding()
                     }
                 }
             }
-        //}
-        //.padding(.top)
+        }
+        .padding(.top)
         .onAppear {
             doRotation()
         }
@@ -85,6 +84,3 @@ struct Favorites: View {
     }
 }
 
-#Preview {
-    
-}

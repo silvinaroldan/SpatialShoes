@@ -10,7 +10,7 @@ import SpatialShoesRC
 import SwiftData
 import SwiftUI
 
-struct ShoeDetail: View {
+struct ShoeDetailView: View {
     let selectedShoe: ShoeDataModel
     
     @Environment(\.modelContext) var modelContext
@@ -142,5 +142,5 @@ struct ShoeDetail: View {
 }
 
 #Preview {
-    ShoeDetail(selectedShoe: .test, touch: .constant(true), rotate: .constant(true))
+    ShoeDetailView(selectedShoe: .test, touch: .constant(true), rotate: .constant(true))
 }
