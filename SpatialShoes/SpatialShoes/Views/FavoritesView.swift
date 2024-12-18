@@ -59,7 +59,7 @@ struct FavoritesView: View {
 
                             Button {
                                 router.selectedTab = Tab.home
-                                shoesVM.selectedShoe = item
+                                //shoesVM.selectedShoe = item
                             } label: {
                                 Text(item.name)
                             }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ShoeModel: Codable {
+struct ShoeModel: Codable, Identifiable, Hashable {
     
     let id: Int
     let name: String
@@ -33,7 +33,7 @@ struct ShoeModel: Codable {
     }
 }
 
-struct Offset: Codable {
+struct Offset: Codable, Hashable {
     var id: UUID { UUID() }
     let x: Double
     let y: Double

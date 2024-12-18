@@ -11,10 +11,11 @@ import SwiftData
 import SwiftUI
 
 struct ShoeDetailView: View {
-    let selectedShoe: ShoeDataModel
+    let selectedShoe: ShoeModel
     
     @Environment(\.modelContext) var modelContext
-    @Query var shoes: [ShoeDataModel]
+    @Query private var favorites: [ShoeDataModel]
+    
     
     @Binding var touch: Bool
     @Binding var rotate: Bool
@@ -30,7 +31,7 @@ struct ShoeDetailView: View {
     @State private var currentRotationX: CGFloat = 0.0
     @State private var currentRotationY: CGFloat = 0.0
     
-    init(selectedShoe: ShoeDataModel, touch: Binding<Bool>, rotate: Binding<Bool>) {
+    init(selectedShoe: ShoeModel, touch: Binding<Bool>, rotate: Binding<Bool>) {
         self.selectedShoe = selectedShoe
         _touch = touch
         _rotate = rotate
@@ -91,13 +92,13 @@ struct ShoeDetailView: View {
         }
         .onAppear {
             doRotation()
-            shoeIsFavorite = selectedShoe.isFavorite
+            shoeIsFavorite = favorites.contains(where: { $0.id == selectedShoe.id })
         }
         .onChange(of: selectedShoe) { _, _ in
             reset()
         }
-        .onChange(of: shoeIsFavorite) { _, _ in
-            selectedShoe.isFavorite = shoeIsFavorite
+        .onChange(of: favorites) {
+            shoeIsFavorite = favorites.contains(where: { $0.id == selectedShoe.id })
         }
         .toolbar {
             Toggle("Favorite", systemImage: "star", isOn: $shoeIsFavorite)
@@ -136,7 +137,7 @@ struct ShoeDetailView: View {
         rotationAngle = 0.0
         currentRotationX = 0.0
         currentRotationY = 0.0
-        shoeIsFavorite = selectedShoe.isFavorite
+        shoeIsFavorite = favorites.contains(where: { $0.id == selectedShoe.id })
     }
 
 }

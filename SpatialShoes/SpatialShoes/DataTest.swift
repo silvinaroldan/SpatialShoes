@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-extension ShoeDataModel {
-    static let test = ShoeDataModel(id: 12345,
+extension ShoeModel {
+    static let test = ShoeModel(id: 12345,
                                 name: "Elegant Heels",
                                 brand: "EleganceWalk",
                                 size: [35,
@@ -37,6 +37,5 @@ extension ShoeDataModel {
                                     "ISO 9001",
                                 ],
                                 offset: Offset(x: -50, y: -50),
-                                scale: 0.8,
-                                isFavorite: false)
+                                scale: 0.8)
 }

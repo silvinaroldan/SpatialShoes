@@ -9,7 +9,24 @@ import SwiftData
 
 @Observable @MainActor
 final class ShoesVM {
-    var selectedShoe: ShoeDataModel?
+    var selectedShoe: ShoeModel?
+    let network = Network()
+    
+    var shoes: [ShoeModel] = []
+    
+    init() {
+        Task {
+            await getShoes()
+        }
+    }
+    
+    func getShoes() async {
+        do {
+            shoes = try await network.getShoes()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 

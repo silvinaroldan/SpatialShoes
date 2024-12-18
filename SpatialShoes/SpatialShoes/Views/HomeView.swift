@@ -13,8 +13,6 @@ struct HomeView: View {
     @Environment(ShoesVM.self) private var shoesVM
     @Environment(\.openWindow) private var open
 
-    @Query(sort: [SortDescriptor<ShoeDataModel>(\.id)]) private var shoes: [ShoeDataModel]
-
     @State private var rotate = false
     @State private var touch = true
 
@@ -23,7 +21,7 @@ struct HomeView: View {
 
         NavigationSplitView {
             List(selection: $shoeBindable.selectedShoe) {
-                ForEach(shoes) { shoe in
+                ForEach(shoesVM.shoes) { shoe in
                     Text(shoe.name)
                         .tag(shoe)
                 }

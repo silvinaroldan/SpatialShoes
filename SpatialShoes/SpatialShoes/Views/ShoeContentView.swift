@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ShoeContentView: View {
-    let selectedShoe: ShoeDataModel
+    let selectedShoe: ShoeModel
 
     var body: some View {
         Form {

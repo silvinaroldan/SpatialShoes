@@ -19,11 +19,8 @@ struct SpatialShoesApp: App {
                 .environment(shoesVM)
                 .environment(navigationRouter)
         }
-        .modelContainer(for: ShoeDataModel.self) { result in
-            guard case .success(let container) = result else { return }
-
-            Task { await loadData(container) }
-        }
+        .modelContainer(for: ShoeDataModel.self)
+        
         WindowGroup(id: "shoe3D") {
             VolumetricShoe()
                 .environment(shoesVM)
@@ -31,16 +28,5 @@ struct SpatialShoesApp: App {
         }
         .windowStyle(.volumetric)
         .defaultSize(width: 0.65, height: 0.65, depth: 0.65, in: .meters)
-    }
-
-    func loadData(_ container: ModelContainer) async {
-        do {
-            let manager = BackgroundDataManager(modelContainer: container)
-            let dataConnection = Network()
-            let shoes = try await dataConnection.getShoes()
-            try await manager.processShoeData(shoes)
-        } catch {
-            print("Error loading shoes \(error).")
-        }
     }
 }
