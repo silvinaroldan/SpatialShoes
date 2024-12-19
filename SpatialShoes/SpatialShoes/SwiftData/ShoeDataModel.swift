@@ -9,7 +9,7 @@ import SwiftData
 import SwiftUI
 
 @Model
-final class ShoeDataModel: Identifiable {
+final class ShoeDataModel {
 
     @Attribute(.unique) var id: Int
     var name: String
@@ -26,11 +26,10 @@ final class ShoeDataModel: Identifiable {
     var colors: [String]
     var warranty: Int
     var certifications: [String]
-    var offset: Offset
     var scale: Double
-    var isFavorite: Bool
     
-    init(id: Int, name: String, brand: String, size: [Int], price: Double, desc: String, model3DName: String, type: String, materials: [String], origin: String, gender: String, weight: Double, colors: [String], warranty: Int, certifications: [String], offset: Offset, scale: Double, isFavorite: Bool) {
+    
+    init(id: Int, name: String, brand: String, size: [Int], price: Double, desc: String, model3DName: String, type: String, materials: [String], origin: String, gender: String, weight: Double, colors: [String], warranty: Int, certifications: [String], scale: Double) {
         self.id = id
         self.name = name
         self.brand = brand
@@ -46,8 +45,7 @@ final class ShoeDataModel: Identifiable {
         self.colors = colors
         self.warranty = warranty
         self.certifications = certifications
-        self.offset = offset
+      
         self.scale = scale
-        self.isFavorite = false
     }
 }

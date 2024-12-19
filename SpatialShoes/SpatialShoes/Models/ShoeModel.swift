@@ -24,11 +24,10 @@ struct ShoeModel: Codable, Identifiable, Hashable {
     let colors: [String]
     let warranty: Int
     let certifications: [String]
-    let offset: Offset
     let scale: Double
     
     enum CodingKeys: String, CodingKey {
-        case id, name, brand, size, price, model3DName, type, materials, origin, gender, weight, colors, warranty, certifications, offset, scale
+        case id, name, brand, size, price, model3DName, type, materials, origin, gender, weight, colors, warranty, certifications, scale
         case desc = "description"
     }
 }

@@ -13,9 +13,10 @@ import SwiftUI
 struct ShoeDetailView: View {
     let selectedShoe: ShoeModel
     
-    @Environment(\.modelContext) var modelContext
-    @Query private var favorites: [ShoeDataModel]
+    @Environment(ShoesVM.self) private var shoesVM
+    @Environment(\.modelContext) var context
     
+    @Query private var favorites: [ShoeDataModel]
     
     @Binding var touch: Bool
     @Binding var rotate: Bool
@@ -46,7 +47,7 @@ struct ShoeDetailView: View {
                     .resizable()
                     .scaledToFit()
                     .scaleEffect(scaleMagnified)
-                    .offset(x: selectedShoe.offset.x, y: selectedShoe.offset.y)
+                   // .offset(x: selectedShoe.offset.x, y: selectedShoe.offset.y)
                     .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: -1, z: 0))
                     .rotation3DEffect(.degrees(currentRotationX), axis: (x: 0, y: 1, z: 0))
                     .rotation3DEffect(.degrees(currentRotationY), axis: (x: -1, y: 0, z: 0))
@@ -101,7 +102,12 @@ struct ShoeDetailView: View {
             shoeIsFavorite = favorites.contains(where: { $0.id == selectedShoe.id })
         }
         .toolbar {
-            Toggle("Favorite", systemImage: "star", isOn: $shoeIsFavorite)
+            Button(shoeIsFavorite ? "Remove as favorite" : "Add as favorite",
+                   systemImage: shoeIsFavorite ? "star.fill" : "star") {
+                try? shoesVM.toggleFavorite(shoe: selectedShoe,
+                                             context: context)
+            }
+           
         }
     }
     

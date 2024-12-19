@@ -36,6 +36,6 @@ extension ShoeModel {
                                     "Producto Ecolgico",
                                     "ISO 9001",
                                 ],
-                                offset: Offset(x: -50, y: -50),
+                                
                                 scale: 0.8)
 }
