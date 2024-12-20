@@ -4,7 +4,7 @@
   <img src="https://github.com/user-attachments/assets/4581be55-7212-48b2-9fae-b0f8742a1a5b" width="200"/>
 </p>
 
-**Xcode Version Used:** Xcode 16.2
+**Xcode Version Used:** Xcode 16.2  
 **visionOS Version:** 2.2
 
 Build an app for the Spatial Shoes store that displays 3D models alongside the data for each shoe model. The UI design is entirely up to you, but it must adhere to Apple’s native interface design guidelines.
