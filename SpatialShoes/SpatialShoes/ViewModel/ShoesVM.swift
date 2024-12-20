@@ -41,6 +41,11 @@ final class ShoesVM {
             context.insert(newShoe)
         }
     }
+    
+    func getFavoriteShoes(context: ModelContext) throws -> [ShoeDataModel] {
+        let query = FetchDescriptor<ShoeDataModel>()
+        return try context.fetch(query)
+    }
 }
 
 
