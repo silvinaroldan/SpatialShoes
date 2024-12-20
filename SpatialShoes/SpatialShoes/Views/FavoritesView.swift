@@ -31,12 +31,12 @@ struct FavoritesView: View {
         let columns = Array(repeating: GridItem(.flexible(), spacing: 10), count: 5)
 
         VStack {
-            Text("Favoritos")
+            Text("Favorites")
                 .font(.title)
                 .padding()
             if favorites.isEmpty {
                 VStack(alignment: .center) {
-                    Text("No hay favoritos seleccionados")
+                    Text("No favorites selected")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
@@ -53,8 +53,6 @@ struct FavoritesView: View {
                                     .scaledToFit()
                                     .scaleEffect(1.0)
                                     .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
-                                } else if phase.error != nil {
-                                    //print("Error en la carga")
                                 } else {
                                     ProgressView()
                                 }
@@ -63,7 +61,7 @@ struct FavoritesView: View {
 
                             Button {
                                 router.selectedTab = Tab.home
-                                //shoesVM.selectedShoe = item
+                                shoesVM.selectedShoe = shoesVM.getShoe(id: item.id)
                             } label: {
                                 Text(item.name)
                             }
@@ -96,7 +94,7 @@ struct FavoritesView: View {
         do {
             favorites = try shoesVM.getFavoriteShoes(context: context)
         } catch {
-            print("Error al obtener los favoritos")
+            print("Failed to retrieve favorites")
         }
             
     }

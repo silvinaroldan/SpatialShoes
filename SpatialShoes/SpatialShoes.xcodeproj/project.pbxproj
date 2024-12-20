@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3506277E2C8DB6B600A495CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3506277D2C8DB6B600A495CF /* ContentView.swift */; };
-		3513D7E52D136C5D00F10779 /* ShoeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3513D7E42D136C5C00F10779 /* ShoeDetailViewModel.swift */; };
 		3513D8132D13778200F10779 /* SpatialShoesRC in Frameworks */ = {isa = PBXBuildFile; productRef = 3513D8122D13778200F10779 /* SpatialShoesRC */; };
+		35186F252D15E7A5000CF504 /* APIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35186F242D15E7A5000CF504 /* APIActor.swift */; };
 		3568A5922C63ACBB00965260 /* SpatialShoesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568A5912C63ACBB00965260 /* SpatialShoesApp.swift */; };
 		3568A5942C63ACBB00965260 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568A5932C63ACBB00965260 /* HomeView.swift */; };
 		3568A5962C63ACBC00965260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3568A5952C63ACBC00965260 /* Assets.xcassets */; };
@@ -19,7 +19,6 @@
 		3568A5AA2C63D01D00965260 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568A5A92C63D01D00965260 /* DataRepository.swift */; };
 		3568A5AF2C64383500965260 /* ShoesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568A5AE2C64383500965260 /* ShoesVM.swift */; };
 		356D5C532C8F21EA0019CA1A /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D5C522C8F21EA0019CA1A /* NavigationRouter.swift */; };
-		356F9B072D0E25DF006C2B64 /* APIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F9B062D0E25DF006C2B64 /* APIActor.swift */; };
 		357990C52C650348007BD9B6 /* ShoeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357990C42C650348007BD9B6 /* ShoeDetailView.swift */; };
 		357990C72C650B2D007BD9B6 /* shoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 357990C62C650B2D007BD9B6 /* shoesTest.json */; };
 		357990C92C650BA2007BD9B6 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357990C82C650BA2007BD9B6 /* DataTest.swift */; };
@@ -34,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		3506277D2C8DB6B600A495CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3513D7E42D136C5C00F10779 /* ShoeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDetailViewModel.swift; sourceTree = "<group>"; };
+		35186F242D15E7A5000CF504 /* APIActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIActor.swift; sourceTree = "<group>"; };
 		352523C82C963B640094CFB4 /* SpatialShoesRC  */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "SpatialShoesRC "; sourceTree = "<group>"; };
 		3568A58A2C63ACBB00965260 /* SpatialShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3568A5912C63ACBB00965260 /* SpatialShoesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialShoesApp.swift; sourceTree = "<group>"; };
@@ -47,7 +46,6 @@
 		3568A5A92C63D01D00965260 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		3568A5AE2C64383500965260 /* ShoesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesVM.swift; sourceTree = "<group>"; };
 		356D5C522C8F21EA0019CA1A /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
-		356F9B062D0E25DF006C2B64 /* APIActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIActor.swift; sourceTree = "<group>"; };
 		357990C42C650348007BD9B6 /* ShoeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDetailView.swift; sourceTree = "<group>"; };
 		357990C62C650B2D007BD9B6 /* shoesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shoesTest.json; sourceTree = "<group>"; };
 		357990C82C650BA2007BD9B6 /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
@@ -174,8 +172,8 @@
 		3568A5A82C63D00C00965260 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				356F9B062D0E25DF006C2B64 /* APIActor.swift */,
 				358FA5512D0F2EFA00AA57E9 /* Interactor.swift */,
+				35186F242D15E7A5000CF504 /* APIActor.swift */,
 				357FF2A42D106D7E00C4599D /* Network.swift */,
 				3568A5A92C63D01D00965260 /* DataRepository.swift */,
 				357FF2A62D106F1500C4599D /* URL.swift */,
@@ -187,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				3568A5AE2C64383500965260 /* ShoesVM.swift */,
-				3513D7E42D136C5C00F10779 /* ShoeDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -290,13 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3513D7E52D136C5D00F10779 /* ShoeDetailViewModel.swift in Sources */,
 				3568A5AA2C63D01D00965260 /* DataRepository.swift in Sources */,
-				356F9B072D0E25DF006C2B64 /* APIActor.swift in Sources */,
 				3568A5A32C63B39100965260 /* ShoeDataModel.swift in Sources */,
 				357FF2A72D106F1500C4599D /* URL.swift in Sources */,
 				357990C92C650BA2007BD9B6 /* DataTest.swift in Sources */,
 				3568A5942C63ACBB00965260 /* HomeView.swift in Sources */,
+				35186F252D15E7A5000CF504 /* APIActor.swift in Sources */,
 				35C817782C6FA347007AD378 /* ShoeContentView.swift in Sources */,
 				357990C52C650348007BD9B6 /* ShoeDetailView.swift in Sources */,
 				358FA5522D0F2EFA00AA57E9 /* Interactor.swift in Sources */,

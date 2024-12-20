@@ -37,7 +37,7 @@ final class ShoesVM {
         if let fetch = try context.fetch(query).first {
             context.delete(fetch)
         } else {
-            let newShoe = ShoeDataModel(id: shoe.id, name: shoe.name, brand: shoe.brand, size: shoe.size, price: shoe.price, desc: shoe.desc, model3DName: shoe.model3DName, type: shoe.type, materials: shoe.materials, origin: shoe.origin, gender: shoe.gender, weight: shoe.weight, colors: shoe.colors, warranty: shoe.warranty, certifications: shoe.certifications, scale: shoe.scale)
+            let newShoe = ShoeDataModel(id: shoe.id, name: shoe.name, brand: shoe.brand, size: shoe.size, price: shoe.price, desc: shoe.desc, model3DName: shoe.model3DName, type: shoe.type, materials: shoe.materials, origin: shoe.origin, gender: shoe.gender, weight: shoe.weight, colors: shoe.colors, warranty: shoe.warranty, certifications: shoe.certifications,offset: shoe.offset, scale: shoe.scale)
             context.insert(newShoe)
         }
     }
@@ -45,6 +45,10 @@ final class ShoesVM {
     func getFavoriteShoes(context: ModelContext) throws -> [ShoeDataModel] {
         let query = FetchDescriptor<ShoeDataModel>()
         return try context.fetch(query)
+    }
+    
+    func getShoe(id: Int) -> ShoeModel? {
+        return shoes.first { $0.id == id }
     }
 }
 

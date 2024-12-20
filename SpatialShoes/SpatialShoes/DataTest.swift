@@ -32,6 +32,9 @@ extension ShoeModel {
                                     "Negro",
                                 ],
                                 warranty: 2,
+                                offset:
+                                    Offset(x: -100, y: -50)
+                                ,
                                 certifications: [
                                     "Producto Ecolgico",
                                     "ISO 9001",

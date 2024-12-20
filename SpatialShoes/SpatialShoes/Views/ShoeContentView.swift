@@ -17,21 +17,21 @@ struct ShoeContentView: View {
                     Text(attributedString)
                 }
             } header: {
-                Text("Descripción")
+                Text("Description")
             }
 
             Section {
-                LabeledContent("**Marca**", value: "\(selectedShoe.brand)")
-                LabeledContent("**Tamaño**", value: selectedShoe.size.map { String($0) }.formatted(.list(type: .and)))
-                LabeledContent("**Precio**", value: "\(selectedShoe.price)")
-                LabeledContent("**Tipo**", value: "\(selectedShoe.type)")
-                LabeledContent("**Género**", value: "\(selectedShoe.gender)")
-                LabeledContent("**Peso**", value: "\(selectedShoe.weight)")
-                LabeledContent("**Origen**", value: "\(selectedShoe.origin)")
-                LabeledContent("**Garantía**", value: "\(selectedShoe.warranty)")
-                LabeledContent("**Certificaciones**", value: selectedShoe.certifications.formatted(.list(type: .and)))
-                LabeledContent("**Colores**", value: selectedShoe.colors.formatted(.list(type: .and)))
-                LabeledContent("**Materiales**", value: selectedShoe.materials.formatted(.list(type: .and)))
+                LabeledContent("**Brand**", value: "\(selectedShoe.brand)")
+                LabeledContent("**Size**", value: selectedShoe.size.map { String($0) }.formatted(.list(type: .and)))
+                LabeledContent("**Price**", value: "\(selectedShoe.price)")
+                LabeledContent("**Type**", value: "\(selectedShoe.type)")
+                LabeledContent("**Gender**", value: "\(selectedShoe.gender)")
+                LabeledContent("**Weight**", value: "\(selectedShoe.weight)")
+                LabeledContent("**Origin**", value: "\(selectedShoe.origin)")
+                LabeledContent("**Warranty**", value: "\(selectedShoe.warranty)")
+                LabeledContent("**Certifications**", value: selectedShoe.certifications.formatted(.list(type: .and)))
+                LabeledContent("**Colors**", value: selectedShoe.colors.formatted(.list(type: .and)))
+                LabeledContent("**Materials**", value: selectedShoe.materials.formatted(.list(type: .and)))
             }
         }
         .navigationTitle(selectedShoe.name)

@@ -47,7 +47,7 @@ struct ShoeDetailView: View {
                     .resizable()
                     .scaledToFit()
                     .scaleEffect(scaleMagnified)
-                   // .offset(x: selectedShoe.offset.x, y: selectedShoe.offset.y)
+                    .offset(x: selectedShoe.offset.x, y: selectedShoe.offset.y)
                     .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: -1, z: 0))
                     .rotation3DEffect(.degrees(currentRotationX), axis: (x: 0, y: 1, z: 0))
                     .rotation3DEffect(.degrees(currentRotationY), axis: (x: -1, y: 0, z: 0))

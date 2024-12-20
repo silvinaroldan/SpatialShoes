@@ -22,7 +22,7 @@ struct ContentView: View {
 
             FavoritesView()
                 .tabItem {
-                    Label("Favoritos", systemImage: "star")
+                    Label("Favorites", systemImage: "star")
                 }
                 .tag(Tab.favorites)
         }

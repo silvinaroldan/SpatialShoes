@@ -40,7 +40,7 @@ struct HomeView: View {
             if let selectedShoe = shoesVM.selectedShoe {
                 ShoeDetailView(selectedShoe: selectedShoe, touch: $touch, rotate: $rotate)
             } else {
-                Text("Selecciona un zapato de la lista")
+                Text("Select a shoe from the list")
             }
         }
         .toolbar {
@@ -59,7 +59,7 @@ struct HomeView: View {
                         Button {
                             open(id: "shoe3D")
                         } label: {
-                            Text("Ver en Detalle")
+                            Text("View detail")
                         }
                     }
                     .toggleStyle(.button)

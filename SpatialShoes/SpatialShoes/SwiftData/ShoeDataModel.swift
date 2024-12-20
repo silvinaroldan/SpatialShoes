@@ -26,10 +26,11 @@ final class ShoeDataModel {
     var colors: [String]
     var warranty: Int
     var certifications: [String]
+    var offset: Offset
     var scale: Double
     
     
-    init(id: Int, name: String, brand: String, size: [Int], price: Double, desc: String, model3DName: String, type: String, materials: [String], origin: String, gender: String, weight: Double, colors: [String], warranty: Int, certifications: [String], scale: Double) {
+    init(id: Int, name: String, brand: String, size: [Int], price: Double, desc: String, model3DName: String, type: String, materials: [String], origin: String, gender: String, weight: Double, colors: [String], warranty: Int, certifications: [String], offset: Offset, scale: Double) {
         self.id = id
         self.name = name
         self.brand = brand
@@ -45,7 +46,7 @@ final class ShoeDataModel {
         self.colors = colors
         self.warranty = warranty
         self.certifications = certifications
-      
+        self.offset = offset
         self.scale = scale
     }
 }
