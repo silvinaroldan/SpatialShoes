@@ -1,55 +1,53 @@
-<h2 align="center"> VISION DEVELOPER PROGRAM 2024 - Apple Coding Academy  </h2>
-<h3 align="center"> Spatial Shoes App - Práctica fin de formación </h3>
+<h2 align="center"> VISION DEVELOPER PROGRAM 2024 - Apple Coding Academy </h2>
+<h3 align="center"> Spatial Shoes App - Final Training Project </h3>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4581be55-7212-48b2-9fae-b0f8742a1a5b" width="200"/>
 </p>
 
+**Xcode Version Used:** Xcode 16.2  
+**visionOS Version:** 2.2
 
-**Versión de Xcode utilizada:** Xcode 16 Release Candidate  
-**visionOS Version:** 2.0
+**Project Objective:** Build an app for the Spatial Shoes store that displays 3D models alongside the data for each shoe model. The UI design is entirely up to you, but it must adhere to Apple’s native interface design guidelines.
 
-Construye una app para la tienda Spatial Shoes, que mostrará los modelos 3D junto a los datos de cada modelo de zapato. La forma de construir la UI es totalmente libre, pero debemos respetar la guía de diseño de interfaces nativas de Apple.
+### Tasks to Complete:
 
-### Tareas a realizar:
-
-- Crear un catálogo que muestre toda la información y los modelos.
+- Create a catalog that displays all the information and models.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d529fadf-f40e-4e7d-b8d2-e3f4e428a9c8" width="600" /></div>
 </p>
 
-- Los modelos podrán manipularse en 3D para poder verlos desde cualquier orientación y tamaño en un modo de visión "libre".
+- The models can be manipulated in 3D to view them from any orientation and size in a "free view" mode.
 <p align="center">
 <img src="https://github.com/user-attachments/assets/433fafba-038e-4933-a5bd-03e1a51bb287" width="600"/>
 </p>
 
-- También existirá un modo "expositor" que podrá elegirse en la pantalla para que el modelo gire de manera continua y automática.
+- There will also be a "display" mode that can be selected on the screen, where the model rotates continuously and automatically.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9281cfe9-199e-472b-a375-5db73d77bffa" width="600"/>
 </p>
 
-- Podrá pulsarse en un modelo 3D para verlo en una ventana volumétrica de manera exclusiva y en más detalle.
+- Users can tap on a 3D model to view it exclusively in a volumetric window with more detailed information.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b45cc752-2aad-481b-9cec-2d2ab0a0d480" width="600"/>
 </p>
 
-- Se podrá marcar como favorito cualquiera de los modelos.
+- Users can mark any model as a favorite.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c992462e-6e05-4c55-86fa-3304ee01a978" width="600"/>
 </p>
 
-- Se generará un layout nuevo para estos favoritos en modo estantería donde podrán verse los modelos 3D rotando de forma continua con su nombre debajo y al pulsarlo se mostrará su ficha en más detalle.
+- Create a new layout for these favorites in a shelf mode, where 3D models rotate continuously with their names displayed below. Tapping on them will show a more detailed profile.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c992462e-6e05-4c55-86fa-3304ee01a978" width="600"/>
 </p>
 
-- Se creará un espacio inmersivo donde habrá un carrusel de zapatos. (opcional). Aparecerá el primero delante nuestro con unos botones de siguiente o anterior, que harán que se muestren los demás. Se puede crear haciendo que entren y salgan de pantalla por opacidad (por ejemplo) o incluso en una rueda donde veas los demás como se van aproximando. La forma de presentar este espacio es libre. Pero tienen que poder verse al máximo de detalle posible mientras lo tengamos "cogido" y al soltarlo volverá a su posición en el espacio de muestra.  
+- Create an immersive space featuring a carousel of shoes (optional). The first shoe appears in front of the user with "next" and "previous" buttons to cycle through the rest. You can implement this by fading shoes in and out or creating a wheel effect where other shoes approach as the user cycles through. The presentation of this space is up to you. However, the shoes must be displayed in maximum detail while being "grabbed" and return to their display position when released.
 
+---
 
-
-Existe un archivo shoes.json que tiene toda la información necesaria.
-```
+A **shoes.json** file contains all the necessary information:
+```swift
 struct Shoe: Codable {
-
       let id: Int
       let name: String
       let brand: String
@@ -67,13 +65,13 @@ struct Shoe: Codable {
       let certifications: [String]
 }
 ```
-Hay que cargar el archivo, que será de solo lectura. Los datos no serán editables desde la app, solo mostrarán los datos de esta.
 
-Es completamente libre el análisis de los datos y la creación de enumeraciones a cualquier sub-estructura de información que necesites para optimizar el catálogo.
+The file must be loaded as read-only. The data is not editable from the app; it only displays the information.
 
-En el campo model3DName está el modelo 3D USDZ que se encuentra en la carpeta 3D. Se deberá crear una archivo en Reality Composer Pro que contenga todos los modelos para que estén bien organizados.
+You are free to analyze the data and create enumerations or substructures to optimize the catalog.
 
-Todas las tareas a realizar son obligatorias salvo la última del espacio inmersivo que es opcional para quien quiera ir un poco más allá.
+The `model3DName` field contains the USDZ 3D model, located in the **3D** folder. A file in Reality Composer Pro must be created to organize all the models appropriately.
 
-Se pueden crear escenas en Reality Composer Pro si se desea y hay que gestionar la escala de cada modelo que será diferente para cada caso, pero en la app deben verse todos del mismo tamaño.
+All tasks are mandatory except for the final immersive space, which is optional for those who want to go the extra mile.
 
+Scenes can be created in Reality Composer Pro if desired. The scale of each model should be adjusted individually, but in the app, all models must appear the same size.

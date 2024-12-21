@@ -1,5 +1,5 @@
 //
-//  Favorites.swift
+//  FavoritesView.swift
 //  SpatialShoes
 //
 //  Created by Silvina Roldan on 16/08/2024.
@@ -10,17 +10,19 @@ import SpatialShoesRC
 import SwiftData
 import SwiftUI
 
-struct Favorites: View {
-    @Environment(ShoesViewModel.self) private var shoesVM
+struct FavoritesView: View {
     @Environment(NavigationRouter.self) private var router
+    @Environment(ShoesVM.self) private var shoesVM
+    @Environment(\.modelContext) var context
 
-    @Query var favoritesShoesMetaData: [ShoeModelMetadata]
+    @State private var favorites: [ShoeDataModel] = []
 
     @State var rotationAngle: Double = 0.0
-    
-    var favoritesShoes : [ShoeModel] {
-        getFavoriteShoes()
-    }
+    @State var isViewVisible: Bool = false
+
+    let columns = [
+        GridItem(.adaptive(minimum: 280), spacing: 30)
+    ]
 
     var body: some View {
         @Bindable var router = router
@@ -29,40 +31,41 @@ struct Favorites: View {
         let columns = Array(repeating: GridItem(.flexible(), spacing: 10), count: 5)
 
         VStack {
-            Text("Favoritos")
+            Text("Favorites")
                 .font(.title)
                 .padding()
-            if favoritesShoes.isEmpty {
+            if favorites.isEmpty {
                 VStack(alignment: .center) {
-                    Text("No hay favoritos seleccionados")
+                    Text("No favorites selected")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(favoritesShoes, id: \.self) { item in
-                        
+           
+                    ForEach(favorites, id: \.self) { item in
+
                         VStack(alignment: .center) {
-                            Model3D(named: item.model3DName, bundle: spatialShoesRCBundle) { model in
-                                model
+                            Model3D(named: item.model3DName, bundle: spatialShoesRCBundle) { phase in
+                                if let model = phase.model {
+                                    model
                                     .resizable()
                                     .scaledToFit()
                                     .scaleEffect(1.0)
                                     .rotation3DEffect(.degrees(rotationAngle), axis: (x: 0, y: 1, z: 0))
-                                
-                            } placeholder: {
-                                ProgressView()
+                                } else {
+                                    ProgressView()
+                                }
                             }
                             .frame(width: 120, height: 120, alignment: .center)
-                            
+
                             Button {
                                 router.selectedTab = Tab.home
-                                shoesVM.selectedShoe = item
+                                shoesVM.selectedShoe = shoesVM.getShoe(id: item.id)
                             } label: {
                                 Text(item.name)
                             }
                         }
-                        .padding()
                     }
                 }
             }
@@ -70,6 +73,11 @@ struct Favorites: View {
         .padding(.top)
         .onAppear {
             doRotation()
+            getFavoritesShoes()
+            isViewVisible = true
+        }
+        .onDisappear() {
+            isViewVisible = false
         }
     }
 
@@ -81,17 +89,14 @@ struct Favorites: View {
             }
         }
     }
-
-    func getFavoriteShoes() -> [ShoeModel] {
-        let favotitesIds = favoritesShoesMetaData
-            .filter { $0.isFavorite }
-            .map { $0.id }
-        return shoesVM.shoes.filter {
-            favotitesIds.contains($0.id)
+    
+    func getFavoritesShoes() {
+        do {
+            favorites = try shoesVM.getFavoriteShoes(context: context)
+        } catch {
+            print("Failed to retrieve favorites")
         }
+            
     }
 }
 
-#Preview {
-    Favorites()
-}

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(NavigationRouter.self) private var router
-    @Environment(ShoesViewModel.self) private var shoesVM
 
     var body: some View {
         @Bindable var router = router
@@ -21,11 +20,12 @@ struct ContentView: View {
                 }
                 .tag(Tab.home)
 
-            Favorites()
+            FavoritesView()
                 .tabItem {
-                    Label("Favoritos", systemImage: "star")
+                    Label("Favorites", systemImage: "star")
                 }
                 .tag(Tab.favorites)
         }
     }
 }
+

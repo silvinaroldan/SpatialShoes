@@ -5,12 +5,12 @@
 //  Created by Silvina Roldan on 07/08/2024.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct SpatialShoesApp: App {
-    @State var shoesVM = ShoesViewModel()
+    @State var shoesVM = ShoesVM()
     @State var navigationRouter = NavigationRouter()
 
     var body: some Scene {
@@ -19,8 +19,8 @@ struct SpatialShoesApp: App {
                 .environment(shoesVM)
                 .environment(navigationRouter)
         }
-        .modelContainer(for: [ShoeModelMetadata.self])
-
+        .modelContainer(for: ShoeDataModel.self)
+        
         WindowGroup(id: "shoe3D") {
             VolumetricShoe()
                 .environment(shoesVM)

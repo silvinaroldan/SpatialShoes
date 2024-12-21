@@ -10,7 +10,7 @@ import RealityKit
 import SpatialShoesRC
 
 struct VolumetricShoe: View {
-    @Environment(ShoesViewModel.self) private var shoesVM
+    @Environment(ShoesVM.self) private var shoesVM
 
     var body: some View {
         RealityView { content in
@@ -25,9 +25,4 @@ struct VolumetricShoe: View {
             }
         }
     }
-}
-
-#Preview(windowStyle: .volumetric, traits: .fixedLayout(width: 1.0, height: 1.0, depth: 1.0)) {
-    VolumetricShoe()
-        .environment(ShoesViewModel(interactor: DataTest()))
 }

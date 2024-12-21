@@ -2,17 +2,10 @@
 //  ShoeModel.swift
 //  SpatialShoes
 //
-//  Created by Silvina Roldan on 07/08/2024.
+//  Created by Silvina Roldan on 16/12/2024.
 //
 
 import Foundation
-import SwiftData
-
-struct Offset: Codable, Identifiable, Hashable {
-    var id: UUID { UUID() }
-    let x: Double
-    let y: Double
-}
 
 struct ShoeModel: Codable, Identifiable, Hashable {
     
@@ -21,7 +14,7 @@ struct ShoeModel: Codable, Identifiable, Hashable {
     let brand: String
     let size: [Int]
     let price: Double
-    let description: String
+    let desc: String
     let model3DName: String
     let type: String
     let materials: [String]
@@ -30,7 +23,18 @@ struct ShoeModel: Codable, Identifiable, Hashable {
     let weight: Double
     let colors: [String]
     let warranty: Int
-    let certifications: [String]
     let offset: Offset
+    let certifications: [String]
     let scale: Double
+    
+    enum CodingKeys: String, CodingKey {
+        case id, name, brand, size, price, model3DName, type, materials, origin, gender, weight, colors, warranty, certifications, offset, scale
+        case desc = "description"
+    }
+}
+
+struct Offset: Codable, Hashable {
+    var id: UUID { UUID() }
+    let x: Double
+    let y: Double
 }
