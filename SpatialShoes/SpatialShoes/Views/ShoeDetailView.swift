@@ -102,7 +102,7 @@ struct ShoeDetailView: View {
             shoeIsFavorite = favorites.contains(where: { $0.id == selectedShoe.id })
         }
         .toolbar {
-            Button(shoeIsFavorite ? "Remove as favorite" : "Add as favorite",
+            Button(shoeIsFavorite ? "Favorite" : "Add as Favorite",
                    systemImage: shoeIsFavorite ? "star.fill" : "star") {
                 try? shoesVM.toggleFavorite(shoe: selectedShoe,
                                              context: context)
