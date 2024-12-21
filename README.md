@@ -7,7 +7,7 @@
 **Xcode Version Used:** Xcode 16.2  
 **visionOS Version:** 2.2
 
-Build an app for the Spatial Shoes store that displays 3D models alongside the data for each shoe model. The UI design is entirely up to you, but it must adhere to Apple’s native interface design guidelines.
+**Project Objective:** Build an app for the Spatial Shoes store that displays 3D models alongside the data for each shoe model. The UI design is entirely up to you, but it must adhere to Apple’s native interface design guidelines.
 
 ### Tasks to Complete:
 
