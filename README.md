@@ -75,3 +75,14 @@ The `model3DName` field contains the USDZ 3D model, located in the **3D** folder
 All tasks are mandatory except for the final immersive space, which is optional for those who want to go the extra mile.
 
 Scenes can be created in Reality Composer Pro if desired. The scale of each model should be adjusted individually, but in the app, all models must appear the same size.
+
+## Feedback
+
+Please feel free to fill [issues](http://github.com/silvinaroldan/SpatialShoes/issues) for bugs, erros and features.
+
+## Contributing
+
+Give a ⭐️ if this project helped you!
+If you want to show some extra appreciation:
+
+<a href="https://www.buymeacoffee.com/silvina" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Present" style="height: 44px !important;width: 140px !important;" height="44px" width="140px" ></a>
